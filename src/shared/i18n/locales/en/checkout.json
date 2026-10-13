@@ -1,0 +1,134 @@
+{
+  "cart": {
+    "title": "Cart",
+    "items": "Items in cart",
+    "upsell": "Don't forget accessories"
+  },
+  "summary": {
+    "title": "Your order",
+    "secure": "This is a demo: payment is simulated, no money is charged",
+    "demo": "Demo payment: use the test cards from the developer panel",
+    "free": "Free"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "emptyText": "Add something to your cart to place an order.",
+    "backToCart": "Back to cart"
+  },
+  "steps": {
+    "label": "Checkout steps",
+    "contact": "Contact",
+    "delivery": "Delivery",
+    "payment": "Payment",
+    "next": "Continue"
+  },
+  "contact": {
+    "haveAccount": "Bought from us before?",
+    "signIn": "Sign in — we'll fill in your details",
+    "email": "Email",
+    "name": "Full name",
+    "phone": "Phone",
+    "phoneHint": "We'll only call if something goes wrong"
+  },
+  "delivery": {
+    "method": "Delivery method",
+    "courier": "Courier to your door",
+    "pickup": "Pickup point",
+    "workshop": "Pick up at the workshop",
+    "today": "Today",
+    "days": "{from}–{to} days",
+    "workshopAddress": "Warsaw, Chodowieckiego 12 — daily 10:00–20:00",
+    "street": "Street and number",
+    "streetHint": "Start typing — we'll suggest the address",
+    "city": "City",
+    "zip": "Postcode",
+    "comment": "Order note",
+    "commentPlaceholder": "E.g. call an hour before"
+  },
+  "payment": {
+    "method": "Payment method",
+    "methods": {
+      "card": "Bank card",
+      "apple_pay": "Apple Pay",
+      "google_pay": "Google Pay"
+    },
+    "cardholder": "Cardholder name",
+    "cardNumber": "Card number",
+    "testHint": "Test: 4242 4242 4242 4242, any future date and any CVC",
+    "exp": "Expiry date",
+    "name": "Name on card",
+    "walletHint": "After you press “Pay”, the wallet confirmation sheet opens.",
+    "pay": "Pay",
+    "cancel": "Cancel",
+    "walletTitle": "Confirm payment to KŌBŌ Keys",
+    "walletConfirm": "Confirm",
+    "walletDemo": "Simulation — no real wallet is used",
+    "errors": {
+      "CARD_DECLINED": "Your bank declined the payment. Try another card.",
+      "INSUFFICIENT_FUNDS": "Insufficient funds on the card.",
+      "PAYMENT_GATEWAY_DOWN": "The payment service is temporarily unavailable. Try again in a minute — your order is saved.",
+      "NETWORK_ERROR": "No connection. Check your internet and try again.",
+      "GENERIC": "Payment failed. Please try again."
+    }
+  },
+  "errors": {
+    "email": "Enter an email like name@example.com",
+    "name": "Enter your name",
+    "phone": "Enter the full phone number",
+    "city": "Enter the city",
+    "street": "Enter the street and number",
+    "zip": "Check the postcode",
+    "comment": "No more than 300 characters",
+    "cardNumber": "Check the card number",
+    "cardExp": "MM/YY, not in the past",
+    "cardCvc": "3 digits on the back (4 for Amex)",
+    "cardName": "As written on the card"
+  },
+  "promo": {
+    "label": "Promo code",
+    "hint": "Try KOBO10 or FREESHIP",
+    "apply": "Apply",
+    "applied": "Promo code applied",
+    "remove": "Remove promo code",
+    "errors": {
+      "PROMO_NOT_FOUND": "No such promo code",
+      "PROMO_EXPIRED": "This promo code has expired",
+      "generic": "Could not check the promo code"
+    }
+  },
+  "conflict": {
+    "title": "While you were checking out…",
+    "text": "…someone bought some of the items. Here's what's left:",
+    "line": "you wanted {wanted}, {available} available",
+    "fix": "Update cart and continue"
+  },
+  "threeDs": {
+    "title": "Payment confirmation",
+    "demo": "demo",
+    "merchant": "Merchant",
+    "amount": "Amount",
+    "card": "Card",
+    "text": "We've sent a code by SMS to the phone number linked to your card.",
+    "code": "SMS code",
+    "hint": "In the demo the code is always 1234",
+    "confirm": "Confirm",
+    "cancel": "Cancel and go back",
+    "wrong": "{count, plural, one {Wrong code. # attempt left} other {Wrong code. # attempts left}}",
+    "failed": "The bank declined the payment. Taking you back to checkout…",
+    "format": "The code is 4 digits",
+    "expired": "This confirmation session has expired"
+  },
+  "order": {
+    "title": "Order {number}",
+    "thanks": "Thank you! Your order is paid",
+    "thanksText": "The receipt and tracking number will arrive at {email}. Kobo is already taking it to the builder.",
+    "liveNote": "In the demo the status moves on by itself every couple of minutes — no need to refresh.",
+    "items": "Order items",
+    "delivery": "Delivery",
+    "payment": "Payment",
+    "continue": "Continue shopping",
+    "repeat": "Order again",
+    "repeated": "Items are back in your cart",
+    "notFound": "Order not found"
+  }
+}

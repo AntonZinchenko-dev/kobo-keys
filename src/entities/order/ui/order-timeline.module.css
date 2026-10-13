@@ -1,0 +1,82 @@
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: var(--space-1);
+  text-align: center;
+}
+
+/* connector line between steps */
+.step:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 21px;
+  inset-inline: -50% 50%;
+  height: 3px;
+  background: var(--line);
+  z-index: -1;
+}
+
+.done:not(:first-child)::before {
+  background: linear-gradient(90deg, var(--matcha), var(--matcha)) no-repeat left / 100% 100%;
+  animation: fill-line 0.8s var(--ease-out);
+}
+
+@keyframes fill-line {
+  from {
+    background-size: 0 100%;
+  }
+}
+
+.dot {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 2px solid var(--line);
+  color: var(--mist);
+  transition: all 0.4s var(--ease-out);
+}
+
+.done .dot {
+  border-color: var(--matcha);
+  background: color-mix(in oklch, var(--matcha), transparent 82%);
+  color: var(--matcha);
+}
+
+.current .dot {
+  box-shadow: 0 0 0 6px color-mix(in oklch, var(--matcha), transparent 85%);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    box-shadow: 0 0 0 10px color-mix(in oklch, var(--matcha), transparent 92%);
+  }
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.time {
+  color: var(--mist);
+  font-size: var(--text-xs);
+}
+
+@media (width < 480px) {
+  .time {
+    display: none;
+  }
+}

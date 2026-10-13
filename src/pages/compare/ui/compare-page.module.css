@@ -1,0 +1,81 @@
+.page {
+  padding-block: var(--space-6) var(--space-7);
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.head h1 {
+  font-size: var(--text-2xl);
+}
+
+.wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.table {
+  width: 100%;
+  min-width: calc(160px + var(--cols) * 200px);
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.table th,
+.table td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--line);
+  text-align: start;
+  vertical-align: top;
+}
+
+/* First column sticks while the table scrolls sideways on phones */
+.table th[scope='row'],
+.table thead th:first-child {
+  position: sticky;
+  inset-inline-start: 0;
+  z-index: 1;
+  width: 160px;
+  background: var(--surface);
+  color: var(--mist);
+  font-weight: 500;
+}
+
+.productCell {
+  position: relative;
+}
+
+.remove {
+  position: absolute;
+  inset: var(--space-2) var(--space-2) auto auto;
+  z-index: 1;
+  background: var(--glass);
+}
+
+.productLink {
+  display: grid;
+  gap: var(--space-2);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.productLink > div {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.differs td {
+  background: color-mix(in oklch, var(--sakura), transparent 94%);
+}
+
+.best {
+  color: var(--matcha);
+}

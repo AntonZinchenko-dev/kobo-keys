@@ -1,0 +1,114 @@
+/* Animated conic border: the registered --angle property rotates the gradient */
+.drop {
+  --angle: 0deg;
+
+  position: relative;
+  display: grid;
+  min-height: 460px;
+  padding: 2px;
+  border-radius: calc(var(--radius-lg) + 2px);
+  background: conic-gradient(from var(--angle), #f2a7bf, #e9c27e, #8f1f26, #f2a7bf);
+  animation: spin-border 6s linear infinite;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+@keyframes spin-border {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.image {
+  position: absolute !important;
+  inset: 2px;
+  z-index: -1;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  aspect-ratio: auto !important;
+  border-radius: var(--radius-lg);
+}
+
+.drop::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  z-index: -1;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(90deg, rgb(12 6 8 / 92%), rgb(12 6 8 / 55%) 55%, rgb(12 6 8 / 15%));
+}
+
+.content {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: var(--space-3);
+  max-width: 560px;
+  padding: var(--space-7) var(--space-5);
+  color: oklch(97% 0.01 85deg);
+}
+
+@media (width >= 768px) {
+  .content {
+    padding: var(--space-7);
+  }
+}
+
+.title {
+  font-size: var(--text-2xl);
+}
+
+.text {
+  color: oklch(85% 0.02 290deg);
+}
+
+.timer {
+  display: flex;
+  gap: var(--space-2);
+  margin-block: var(--space-2);
+}
+
+.unit {
+  display: grid;
+  justify-items: center;
+  min-width: 64px;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: var(--radius);
+  background: rgb(255 255 255 / 6%);
+  backdrop-filter: blur(8px);
+}
+
+.digits {
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.unitLabel {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.buy {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.stock {
+  color: #e9c27e;
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.buttons a {
+  color: inherit;
+}

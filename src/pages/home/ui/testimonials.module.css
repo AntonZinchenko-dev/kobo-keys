@@ -1,0 +1,72 @@
+.title {
+  margin-bottom: var(--space-5);
+  font-size: var(--text-2xl);
+}
+
+/* Scroll-snap carousel; CSS ::scroll-button arrows where supported */
+.list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(82vw, 340px);
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.track {
+  padding: 0 0 var(--space-4);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  anchor-name: --reviews;
+}
+
+.track::scroll-button(left),
+.track::scroll-button(right) {
+  content: '←';
+  position: fixed;
+  position-anchor: --reviews;
+  inset-block-start: anchor(center);
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--glass);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.track::scroll-button(left) {
+  inset-inline-start: calc(anchor(left) + 8px);
+}
+
+.track::scroll-button(right) {
+  content: '→';
+  inset-inline-end: calc(anchor(right) + 8px);
+}
+
+.track::scroll-button(*):disabled {
+  opacity: 0.3;
+}
+
+.card {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  scroll-snap-align: start;
+}
+
+.quote {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-4) var(--space-5) var(--space-5);
+}
+
+.quote footer {
+  color: var(--mist);
+  font-size: var(--text-sm);
+}

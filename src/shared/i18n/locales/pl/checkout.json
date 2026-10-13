@@ -1,0 +1,134 @@
+{
+  "cart": {
+    "title": "Koszyk",
+    "items": "Produkty w koszyku",
+    "upsell": "Nie zapomnij o akcesoriach"
+  },
+  "summary": {
+    "title": "Twoje zamówienie",
+    "secure": "To demo: płatność jest symulowana, pieniądze nie są pobierane",
+    "demo": "Płatność demo: użyj kart testowych z panelu dewelopera",
+    "free": "Gratis"
+  },
+  "checkout": {
+    "title": "Składanie zamówienia",
+    "emptyText": "Aby złożyć zamówienie, dodaj coś do koszyka.",
+    "backToCart": "Wróć do koszyka"
+  },
+  "steps": {
+    "label": "Kroki zamówienia",
+    "contact": "Kontakt",
+    "delivery": "Dostawa",
+    "payment": "Płatność",
+    "next": "Dalej"
+  },
+  "contact": {
+    "haveAccount": "Kupowałeś już u nas?",
+    "signIn": "Zaloguj się — uzupełnimy dane",
+    "email": "E-mail",
+    "name": "Imię i nazwisko",
+    "phone": "Telefon",
+    "phoneHint": "Zadzwonimy tylko, jeśli coś pójdzie nie tak"
+  },
+  "delivery": {
+    "method": "Sposób dostawy",
+    "courier": "Kurier pod drzwi",
+    "pickup": "Punkt odbioru",
+    "workshop": "Odbiór w pracowni",
+    "today": "Dziś",
+    "days": "{from}–{to} dni",
+    "workshopAddress": "Warszawa, ul. Chodowieckiego 12 — codziennie 10:00–20:00",
+    "street": "Ulica i numer",
+    "streetHint": "Zacznij pisać — podpowiemy adres",
+    "city": "Miasto",
+    "zip": "Kod pocztowy",
+    "comment": "Uwagi do zamówienia",
+    "commentPlaceholder": "Np. zadzwonić godzinę wcześniej"
+  },
+  "payment": {
+    "method": "Metoda płatności",
+    "methods": {
+      "card": "Karta płatnicza",
+      "apple_pay": "Apple Pay",
+      "google_pay": "Google Pay"
+    },
+    "cardholder": "Imię posiadacza",
+    "cardNumber": "Numer karty",
+    "testHint": "Test: 4242 4242 4242 4242, dowolna przyszła data i dowolny CVC",
+    "exp": "Data ważności",
+    "name": "Imię na karcie",
+    "walletHint": "Po kliknięciu „Zapłać” otworzy się okno potwierdzenia portfela.",
+    "pay": "Zapłać",
+    "cancel": "Anuluj",
+    "walletTitle": "Potwierdź płatność dla KŌBŌ Keys",
+    "walletConfirm": "Potwierdź",
+    "walletDemo": "Symulacja — prawdziwy portfel nie jest używany",
+    "errors": {
+      "CARD_DECLINED": "Bank odrzucił płatność. Spróbuj innej karty.",
+      "INSUFFICIENT_FUNDS": "Brak wystarczających środków na karcie.",
+      "PAYMENT_GATEWAY_DOWN": "Usługa płatności jest chwilowo niedostępna. Spróbuj za minutę — zamówienie jest zapisane.",
+      "NETWORK_ERROR": "Brak połączenia. Sprawdź internet i spróbuj ponownie.",
+      "GENERIC": "Płatność nie powiodła się. Spróbuj ponownie."
+    }
+  },
+  "errors": {
+    "email": "Wpisz e-mail w formacie name@example.com",
+    "name": "Wpisz imię",
+    "phone": "Wpisz pełny numer telefonu",
+    "city": "Podaj miasto",
+    "street": "Podaj ulicę i numer",
+    "zip": "Sprawdź kod pocztowy",
+    "comment": "Maksymalnie 300 znaków",
+    "cardNumber": "Sprawdź numer karty",
+    "cardExp": "MM/RR, nie w przeszłości",
+    "cardCvc": "3 cyfry z tyłu karty (Amex — 4)",
+    "cardName": "Tak jak na karcie"
+  },
+  "promo": {
+    "label": "Kod rabatowy",
+    "hint": "Spróbuj KOBO10 lub FREESHIP",
+    "apply": "Zastosuj",
+    "applied": "Kod rabatowy zastosowany",
+    "remove": "Usuń kod rabatowy",
+    "errors": {
+      "PROMO_NOT_FOUND": "Nie ma takiego kodu",
+      "PROMO_EXPIRED": "Kod rabatowy wygasł",
+      "generic": "Nie udało się sprawdzić kodu"
+    }
+  },
+  "conflict": {
+    "title": "Gdy składałeś zamówienie…",
+    "text": "…ktoś kupił część produktów. Oto co zostało:",
+    "line": "chciałeś {wanted}, dostępne {available}",
+    "fix": "Zaktualizuj koszyk i kontynuuj"
+  },
+  "threeDs": {
+    "title": "Potwierdzenie płatności",
+    "demo": "demo",
+    "merchant": "Sklep",
+    "amount": "Kwota",
+    "card": "Karta",
+    "text": "Wysłaliśmy kod SMS na numer powiązany z kartą.",
+    "code": "Kod z SMS",
+    "hint": "W demo kod to zawsze 1234",
+    "confirm": "Potwierdź",
+    "cancel": "Anuluj i wróć",
+    "wrong": "{count, plural, one {Błędny kod. Została # próba} few {Błędny kod. Zostały # próby} many {Błędny kod. Zostało # prób} other {Błędny kod. Zostało # próby}}",
+    "failed": "Bank odrzucił płatność. Wracamy do zamówienia…",
+    "format": "Kod ma 4 cyfry",
+    "expired": "Sesja potwierdzenia wygasła"
+  },
+  "order": {
+    "title": "Zamówienie {number}",
+    "thanks": "Dziękujemy! Zamówienie opłacone",
+    "thanksText": "Paragon i numer przesyłki przyjdą na {email}. Kobo już niesie je do mistrza.",
+    "liveNote": "W demo status zmienia się sam co kilka minut — nie trzeba odświeżać.",
+    "items": "Skład zamówienia",
+    "delivery": "Dostawa",
+    "payment": "Płatność",
+    "continue": "Kontynuuj zakupy",
+    "repeat": "Zamów ponownie",
+    "repeated": "Produkty wróciły do koszyka",
+    "notFound": "Nie znaleziono zamówienia"
+  }
+}

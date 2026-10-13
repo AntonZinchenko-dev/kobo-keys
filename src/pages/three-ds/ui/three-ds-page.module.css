@@ -1,0 +1,91 @@
+.page {
+  display: grid;
+  place-items: center;
+  min-height: 70dvh;
+  padding: var(--space-6) var(--gutter);
+  background:
+    radial-gradient(circle at 20% 20%, color-mix(in oklch, var(--matcha), transparent 85%), transparent 40%),
+    var(--ink);
+}
+
+.bank {
+  display: grid;
+  gap: var(--space-4);
+  width: min(100%, 440px);
+  padding: var(--space-6);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: 0 30px 80px -30px var(--shadow-color);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--matcha);
+  font-weight: 800;
+}
+
+.logo small {
+  color: var(--mist);
+  font-weight: 500;
+}
+
+.demo {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  color: var(--mist);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.bank h1 {
+  font-size: var(--text-lg);
+}
+
+.details {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+}
+
+.details div {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+}
+
+.details dt {
+  color: var(--mist);
+}
+
+.details dd {
+  margin: 0;
+  font-family: var(--font-mono);
+}
+
+.text {
+  color: var(--mist);
+  font-size: var(--text-sm);
+}
+
+.code {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  letter-spacing: 0.6em;
+  text-align: center;
+}

@@ -1,0 +1,153 @@
+.card {
+  --mx: 0.5;
+  --my: 0.5;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  container-type: inline-size;
+  transition:
+    opacity 0.3s,
+    filter 0.3s,
+    scale 0.3s;
+}
+
+.media {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--surface-2);
+  transform: perspective(900px) rotateX(calc((var(--my) - 0.5) * -10deg))
+    rotateY(calc((var(--mx) - 0.5) * 10deg));
+  transition: transform 0.4s var(--ease-out);
+  will-change: transform;
+}
+
+.mediaLink {
+  display: block;
+}
+
+.alt {
+  position: absolute !important;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.45s var(--ease-out);
+}
+
+@media (hover: hover) {
+  .card:hover .alt {
+    opacity: 1;
+  }
+}
+
+.glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at calc(var(--mx) * 100%) calc(var(--my) * 100%),
+    oklch(100% 0 0deg / 22%),
+    transparent 45%
+  );
+  opacity: 0;
+  mix-blend-mode: soft-light;
+  transition: opacity 0.3s;
+}
+
+@media (hover: hover) {
+  .card:hover .glare {
+    opacity: 1;
+  }
+}
+
+.badges {
+  position: absolute;
+  inset-block-start: var(--space-3);
+  inset-inline-start: var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  pointer-events: none;
+}
+
+.actions {
+  position: absolute;
+  inset-block-start: var(--space-2);
+  inset-inline-end: var(--space-2);
+  display: grid;
+  gap: var(--space-1);
+  padding: 2px;
+  border-radius: 14px;
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+}
+
+.body {
+  display: grid;
+  gap: var(--space-1);
+  padding-inline: var(--space-1);
+}
+
+.name {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* The whole card is clickable via the title link (keeps one tab stop per card) */
+.link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.tagline {
+  color: var(--mist);
+  font-size: var(--text-sm);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.footer {
+  position: relative;
+  z-index: 1;
+  margin-top: var(--space-2);
+}
+
+.actions,
+.footer {
+  z-index: 1;
+}
+
+.soldOut .media {
+  filter: grayscale(0.7);
+}
+
+/* Narrow card (2 columns on a phone): stack price and rating */
+@container (width < 220px) {
+  .meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tagline {
+    display: none;
+  }
+}

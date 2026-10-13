@@ -1,0 +1,123 @@
+{
+  "catalog": {
+    "title": "Shop",
+    "description": "KŌBŌ Keys mechanical keyboards, keycaps, switches and accessories with filters by layout, switch type and colour.",
+    "breadcrumbs": "Breadcrumbs",
+    "searchFor": "Results for “{q}”.",
+    "clearSearch": "Clear search",
+    "categories": "Categories",
+    "all": "All",
+    "empty": "Nothing found",
+    "emptyText": "Kobo searched the whole workshop. Try removing a filter or two.",
+    "shown": "Showing {shown} of {total}",
+    "compareNow": "Compare ({count})"
+  },
+  "filters": {
+    "title": "Filters",
+    "availability": "Availability",
+    "inStock": "In stock only",
+    "layout": "Layout",
+    "switch": "Switch type",
+    "color": "Colour",
+    "price": "Price",
+    "priceFrom": "Price from",
+    "priceTo": "Price to",
+    "products": "{count, plural, one {# product} other {# products}}",
+    "reset": "Reset filters",
+    "show": "{count, plural, =0 {Nothing found} one {Show # product} other {Show # products}}",
+    "active": "Active filters",
+    "removeOne": "Remove filter “{name}”"
+  },
+  "layouts": {
+    "60": "60% — compact",
+    "65": "65% — with arrows",
+    "75": "75% — with F-row",
+    "tkl": "TKL — tenkeyless",
+    "split": "Split"
+  },
+  "switchTypes": {
+    "linear": "Linear",
+    "tactile": "Tactile",
+    "clicky": "Clicky",
+    "silent": "Silent"
+  },
+  "sort": {
+    "label": "Sort by",
+    "popular": "Popular",
+    "new": "Newest",
+    "price-asc": "Price: low to high",
+    "price-desc": "Price: high to low",
+    "rating": "Rating"
+  },
+  "options": {
+    "color": "Colour",
+    "switch": "Switches",
+    "size": "Size",
+    "kit": "Kit"
+  },
+  "specs": {
+    "layout": "Layout",
+    "case": "Case",
+    "plate": "Plate",
+    "mount": "Mount",
+    "hotswap": "Hot-swap",
+    "connection": "Connection",
+    "weight": "Weight",
+    "material": "Material",
+    "profile": "Profile",
+    "keys": "Keys",
+    "actuation": "Actuation force",
+    "travel": "Travel",
+    "size": "Size",
+    "length": "Length"
+  },
+  "product": {
+    "photo": "photo {n}",
+    "photos": "Product photos",
+    "fullscreen": "Open photos full screen",
+    "closeFullscreen": "Close",
+    "notFound": "This product doesn't exist",
+    "listen": "Hear the sound",
+    "inStock": "In stock, ships tomorrow",
+    "perkShipping": "Free shipping over €150",
+    "perkReturns": "30-day returns",
+    "perkWarranty": "2-year warranty",
+    "description": "Description",
+    "specs": "Specifications",
+    "together": "Frequently bought together",
+    "related": "You may also like"
+  },
+  "reviews": {
+    "title": "Reviews",
+    "average": "Average rating {rating} out of 5",
+    "count": "{count, plural, one {# review} other {# reviews}}",
+    "filtered": "Showing {rating}-star reviews.",
+    "showAll": "Show all",
+    "verified": "Verified purchase",
+    "stars": "{rating} out of 5",
+    "photo": "Customer photo",
+    "helpful": "Helpful",
+    "pages": "Review pages",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "wishlist": {
+    "title": "Wishlist",
+    "empty": "Nothing here yet",
+    "emptyText": "Tap ♡ on product cards — your favourites will wait for you here.",
+    "clear": "Clear"
+  },
+  "compare": {
+    "title": "Compare",
+    "empty": "Nothing to compare",
+    "emptyText": "Add at least two products with the compare button on a product card.",
+    "onlyDiff": "Differences only",
+    "clear": "Clear",
+    "price": "Price",
+    "rating": "Rating",
+    "category": "Category",
+    "availability": "Availability",
+    "remove": "Remove",
+    "feature": "Feature"
+  }
+}

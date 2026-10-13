@@ -1,0 +1,179 @@
+.button {
+  --cap: var(--surface-3);
+  --cap-text: var(--text);
+  --cap-edge: color-mix(in oklch, var(--cap), black 38%);
+  --press: 0px;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 var(--space-5);
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(to bottom, color-mix(in oklch, var(--cap), white 10%), var(--cap) 60%);
+  color: var(--cap-text);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow:
+    0 calc(5px - var(--press)) 0 var(--cap-edge),
+    0 calc(10px - var(--press)) 18px -8px var(--shadow-color),
+    inset 0 1px 0 oklch(100% 0 0deg / 28%);
+  translate: 0 var(--press);
+  transition:
+    translate 0.08s,
+    box-shadow 0.08s,
+    filter 0.2s;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.face {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+@media (hover: hover) {
+  .button:hover:not(:disabled) {
+    filter: brightness(1.08);
+  }
+}
+
+.button:active:not(:disabled) {
+  --press: 4px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.primary {
+  --cap: var(--sakura);
+  --cap-text: var(--on-sakura);
+}
+
+.secondary {
+  --cap: var(--surface-3);
+}
+
+.danger {
+  --cap: var(--danger);
+  --cap-text: oklch(99% 0 0deg);
+}
+
+.ghost {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--line);
+  translate: none;
+}
+
+.ghost:active:not(:disabled) {
+  --press: 0px;
+
+  background: var(--surface-2);
+}
+
+.sm {
+  min-height: 36px;
+  padding: 0 var(--space-4);
+  font-size: var(--text-xs);
+  border-radius: 10px;
+}
+
+.lg {
+  min-height: 54px;
+  padding: 0 var(--space-6);
+  font-size: var(--text-md);
+  border-radius: 14px;
+}
+
+.block {
+  display: flex;
+  width: 100%;
+}
+
+.loading .face {
+  opacity: 0;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    rotate: 1turn;
+  }
+}
+
+.iconButton {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--text);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    scale 0.15s;
+}
+
+@media (hover: hover) {
+  .iconButton:hover {
+    background: var(--surface-2);
+  }
+}
+
+.iconButton:active {
+  scale: 0.92;
+}
+
+.active {
+  color: var(--sakura);
+}
+
+.active svg {
+  fill: currentColor;
+}
+
+.badge {
+  position: absolute;
+  inset-block-start: 4px;
+  inset-inline-end: 2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--sakura);
+  color: var(--on-sakura);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  animation: pop 0.4s var(--ease-spring);
+}
+
+@keyframes pop {
+  from {
+    scale: 0.4;
+  }
+}

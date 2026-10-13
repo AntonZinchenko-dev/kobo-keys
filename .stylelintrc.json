@@ -1,0 +1,94 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-css-modules"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "selector-class-pattern": [
+      "^[a-z][a-zA-Z0-9]*$",
+      {
+        "message": "Use camelCase class names (CSS Modules)"
+      }
+    ],
+    "custom-property-pattern": null,
+    "keyframes-name-pattern": null,
+    "no-descending-specificity": null,
+    "declaration-property-value-no-unknown": null,
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "interpolate-size",
+          "field-sizing",
+          "anchor-name",
+          "position-anchor",
+          "timeline-scope",
+          "view-timeline-name",
+          "animation-range",
+          "container-type"
+        ]
+      }
+    ],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "property",
+          "starting-style",
+          "layer",
+          "container",
+          "view-transition",
+          "position-try"
+        ]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": [
+          "view-transition-old",
+          "view-transition-new",
+          "view-transition-group",
+          "view-transition-image-pair",
+          "scroll-marker",
+          "scroll-marker-group",
+          "scroll-button"
+        ]
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global", "local", "popover-open", "target-current"]
+      }
+    ],
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": ["light-dark", "anchor", "scroll", "view", "oklch"]
+      }
+    ],
+    "media-feature-range-notation": "context",
+    "import-notation": null,
+    "value-keyword-case": [
+      "lower",
+      {
+        "camelCaseSvgKeywords": true,
+        "ignoreProperties": ["composes"]
+      }
+    ],
+    "order/order": ["custom-properties", "declarations"],
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignoreTypes": ["left", "right", "/^\\*$/"]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["src/app/styles/*.css"],
+      "rules": {
+        "selector-class-pattern": null
+      }
+    }
+  ]
+}

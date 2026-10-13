@@ -1,0 +1,293 @@
+/* ───────── Hero ───────── */
+.hero {
+  position: relative;
+  display: grid;
+  align-items: start;
+  min-height: calc(100svh - var(--header-h));
+  margin-top: calc(-1 * var(--header-h));
+  padding-top: calc(var(--header-h) + var(--space-6));
+  overflow: clip;
+  isolation: isolate;
+  background: #050407;
+  color: oklch(96% 0.01 85deg);
+}
+
+@media (width >= 641px) {
+  .hero {
+    align-items: center;
+    padding-top: var(--header-h);
+  }
+}
+
+.heroMedia {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.heroImage {
+  position: absolute !important;
+  inset: 0;
+  height: 100%;
+  aspect-ratio: auto !important;
+  background-color: #050407 !important;
+}
+
+.heroImage img {
+  object-position: 70% 50%;
+}
+
+/* Darken the left side on desktop so the text stays readable */
+.heroMedia::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgb(5 4 7 / 85%) 0%, rgb(5 4 7 / 62%) 48%, transparent 72%),
+    linear-gradient(to top, rgb(5 4 7 / 90%), transparent 25%);
+}
+
+@media (width >= 641px) {
+  .heroMedia::after {
+    background:
+      linear-gradient(90deg, rgb(5 4 7 / 92%) 0%, rgb(5 4 7 / 55%) 38%, transparent 65%),
+      linear-gradient(to top, rgb(5 4 7 / 90%), transparent 25%);
+  }
+}
+
+/* Scroll-driven parallax: the keyboard drifts and zooms as you scroll past the hero */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .heroImage {
+      animation: hero-drift linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 100vh;
+    }
+
+    .heroContent {
+      animation: hero-fade linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 70vh;
+    }
+
+    .heroKanji {
+      animation: kanji-drift linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 100vh;
+    }
+  }
+}
+
+@keyframes hero-drift {
+  to {
+    scale: 1.18;
+    translate: 0 14%;
+    filter: blur(3px) brightness(0.6);
+  }
+}
+
+@keyframes hero-fade {
+  to {
+    opacity: 0;
+    translate: 0 -60px;
+  }
+}
+
+@keyframes kanji-drift {
+  to {
+    translate: 0 -40%;
+  }
+}
+
+.heroKanji {
+  position: absolute;
+  inset-block-start: 14%;
+  inset-inline-end: 2%;
+  z-index: 0;
+  writing-mode: vertical-rl;
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', serif;
+  font-size: clamp(6rem, 4rem + 10vw, 16rem);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(242 167 191 / 28%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.heroContent {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 640px;
+  margin-inline: max(var(--gutter), (100% - var(--container)) / 2);
+  padding-block: var(--space-6);
+}
+
+.kicker {
+  color: var(--sakura);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  font-size: var(--text-3xl);
+  line-height: 1.02;
+}
+
+.heroTitle em {
+  display: block;
+  font-style: normal;
+  background: linear-gradient(100deg, #f7b6cb, #f2a7bf 40%, #e9c27e);
+  background-clip: text;
+  color: transparent;
+}
+
+.heroText {
+  max-width: 46ch;
+  color: oklch(85% 0.02 290deg);
+  font-size: var(--text-lg);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.stats {
+  display: none;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-top: var(--space-4);
+}
+
+@media (width >= 641px) {
+  .stats {
+    display: flex;
+  }
+}
+
+.stats div {
+  display: grid;
+}
+
+.stats dt {
+  order: 2;
+  color: oklch(75% 0.02 290deg);
+  font-size: var(--text-xs);
+}
+
+.stats dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+}
+
+.scrollHint {
+  position: absolute;
+  inset: auto 0 var(--space-4);
+  display: none;
+  justify-content: center;
+  animation: nudge 2s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+@media (width >= 641px) {
+  .scrollHint {
+    display: flex;
+  }
+}
+
+@keyframes nudge {
+  50% {
+    translate: 0 6px;
+  }
+}
+
+/* ───────── Marquee ───────── */
+.marquee {
+  padding-block: var(--space-4);
+  border-block: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.marqueeItem {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  white-space: nowrap;
+}
+
+.marqueeDot {
+  color: var(--sakura);
+}
+
+/* ───────── Sections ───────── */
+.sections {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-8);
+  padding-top: var(--space-8);
+}
+
+.workshop {
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+@media (width >= 1024px) {
+  .workshop {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+.workshopImage {
+  border-radius: var(--radius-lg);
+}
+
+.workshopText {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.workshopText h2 {
+  font-size: var(--text-2xl);
+}
+
+.workshopText p {
+  color: var(--mist);
+}
+
+.workshopList {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.workshopList li {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.workshopList svg {
+  color: var(--matcha);
+}
+
+/* In the light theme the header is dark text — keep the hero below it instead of under it */
+:global([data-theme='light']) .hero {
+  margin-top: 0;
+}
+
+@media (prefers-color-scheme: light) {
+  :global(:root:not([data-theme])) .hero {
+    margin-top: 0;
+  }
+}

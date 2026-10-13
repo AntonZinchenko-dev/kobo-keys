@@ -1,0 +1,180 @@
+{
+  "nav": {
+    "home": "Home",
+    "main": "Main navigation",
+    "mobile": "Navigation",
+    "catalog": "Shop",
+    "builder": "Builder",
+    "club": "Keycap Club",
+    "wishlist": "Wishlist",
+    "account": "Account",
+    "compare": "Compare",
+    "search": "Search",
+    "cart": "Cart",
+    "profile": "Profile",
+    "skip": "Skip to content"
+  },
+  "search": {
+    "placeholder": "Keyboards, keycaps, switches…",
+    "open": "Open search",
+    "title": "Search the shop",
+    "loading": "Searching…",
+    "recent": "Recent:",
+    "results": "Results",
+    "popular": "Popular",
+    "nothing": "Nothing found for “{q}”",
+    "hintMove": "move",
+    "hintOpen": "open",
+    "hintClose": "close"
+  },
+  "settings": {
+    "language": "Language",
+    "currency": "Currency",
+    "theme": "Theme: {theme}. Switch",
+    "themes": {
+      "dark": "dark",
+      "light": "light",
+      "system": "system"
+    }
+  },
+  "cart": {
+    "open": "Cart, items: {count}",
+    "title": "Cart · {count}",
+    "subtotal": "Subtotal",
+    "viewCart": "View cart",
+    "checkout": "Checkout",
+    "empty": "Your cart is empty",
+    "emptyText": "Kobo peeked inside — nothing here yet. A perfect time to find something nice.",
+    "toCatalog": "Go to the shop",
+    "freeShipping": "Progress to free shipping",
+    "freeShippingReached": "Shipping is free!",
+    "freeShippingLeft": "{amount} away from free shipping",
+    "added": "Added to cart",
+    "notEnough": "Not enough “{name}” in stock",
+    "onlyLeft": "{count, plural, =0 {None left} one {Only # left} other {Only # left}}",
+    "outOfStock": "Sold out",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "quantity": "Quantity",
+    "remove": "Remove “{name}”",
+    "removed": "“{name}” removed from cart",
+    "undo": "Undo",
+    "items": "{count, plural, one {# item} other {# items}}"
+  },
+  "badges": {
+    "new": "New",
+    "drop": "Drop",
+    "bestseller": "Bestseller",
+    "sale": "Sale",
+    "limited": "Limited"
+  },
+  "product": {
+    "soldOut": "Sold out",
+    "ratingLabel": "Rated {rating} out of 5, {count} reviews",
+    "addToCart": "Add to cart",
+    "quickView": "Quick view: {name}",
+    "quickViewShort": "Quick",
+    "details": "Details"
+  },
+  "wishlist": {
+    "add": "Add “{name}” to wishlist",
+    "remove": "Remove “{name}” from wishlist"
+  },
+  "compare": {
+    "add": "Add “{name}” to compare",
+    "remove": "Remove “{name}” from compare",
+    "full": "You can compare up to {count} products"
+  },
+  "categories": {
+    "keyboards": "Keyboards",
+    "keycaps": "Keycaps",
+    "switches": "Switches",
+    "accessories": "Accessories"
+  },
+  "colors": {
+    "pink": "Pink",
+    "white": "White",
+    "black": "Black",
+    "green": "Green",
+    "blue": "Blue",
+    "red": "Red",
+    "orange": "Orange",
+    "yellow": "Yellow",
+    "purple": "Purple",
+    "wood": "Wood"
+  },
+  "errors": {
+    "generic": "Something went wrong",
+    "tryAgain": "Please try again in a few seconds",
+    "rolledBack": "We put everything back as it was",
+    "offline": "You are offline — showing what is already loaded",
+    "notFound": "Page not found",
+    "crashed": "Kobo got tangled in the cables",
+    "crashedText": "An unexpected error happened. Reloading the page usually helps.",
+    "loadFailed": "Could not load data",
+    "retry": "Retry"
+  },
+  "actions": {
+    "close": "Close",
+    "reload": "Reload",
+    "back": "Back",
+    "showMore": "Show more",
+    "share": "Share",
+    "copied": "Link copied"
+  },
+  "order": {
+    "timeline": "Order status",
+    "status": {
+      "pending_payment": "Awaiting payment",
+      "paid": "Paid",
+      "processing": "Being built",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "canceled": "Canceled"
+    }
+  },
+  "footer": {
+    "about": "A mechanical keyboard workshop with a Japanese soul. Assembled, lubed and tested by hand.",
+    "shop": "Shop",
+    "more": "More",
+    "demo": "This is a demo",
+    "demoText": "A portfolio project: the backend runs right in your browser (MSW) and payments are simulated. Nothing is charged.",
+    "portfolio": "portfolio project"
+  },
+  "dev": {
+    "open": "Developer panel",
+    "title": "Developer panel",
+    "lead": "Make the network slow or flaky and see how the interface copes.",
+    "latency": "Network speed",
+    "fast": "Fast",
+    "normal": "Normal",
+    "errors": "Random server errors",
+    "scenario": "Scenario",
+    "scenarios": {
+      "none": "All good",
+      "out-of-stock-on-checkout": "Item sells out during checkout",
+      "payment-server-down": "Payment server is down"
+    },
+    "other": "Other",
+    "offline": "Offline mode",
+    "pseudo": "Pseudo-locale (layout check)",
+    "cheatsheet": "Test cards and codes",
+    "cards": {
+      "success": "payment succeeds",
+      "declined": "bank declines",
+      "threeDs": "needs confirmation, code 1234",
+      "funds": "insufficient funds"
+    },
+    "promos": "−10% · free shipping · expired",
+    "loginCode": "sign-in code for any email",
+    "reset": "Reset demo data",
+    "resetDone": "Data reset"
+  },
+  "summary": {
+    "subtotal": "Items",
+    "discount": "Discount {code}",
+    "shipping": "Shipping",
+    "free": "Free",
+    "total": "Total"
+  }
+}

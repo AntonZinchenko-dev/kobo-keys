@@ -1,0 +1,5 @@
+dist
+coverage
+public/mockServiceWorker.js
+src/shared/images/manifest.generated.json
+package-lock.json

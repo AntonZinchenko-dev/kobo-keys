@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>KŌBŌ Keys — mechanical keyboard workshop</title>
+    <meta
+      name="description"
+      content="KŌBŌ Keys — a Japanese-inspired mechanical keyboard workshop: keyboards, keycaps, switches, a custom builder and the Keycap Club subscription."
+    />
+    <meta name="theme-color" content="#0b0a10" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f8f5ef" media="(prefers-color-scheme: light)" />
+    <link rel="icon" href="%BASE_URL%favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="%BASE_URL%apple-touch-icon.png" />
+    <link rel="manifest" href="%BASE_URL%manifest.webmanifest" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="KŌBŌ Keys" />
+    <meta property="og:title" content="KŌBŌ Keys — mechanical keyboard workshop" />
+    <meta
+      property="og:description"
+      content="Keyboards, keycaps and switches with a Japanese soul. Build your own keyboard online."
+    />
+    <meta property="og:image" content="https://antonzinchenko-dev.github.io/kobo-keys/og/og-en.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Apply the saved theme before first paint: no flash of the wrong theme -->
+    <script>
+      try {
+        var t = JSON.parse(localStorage.getItem('kobo-theme') || '{}').state;
+        if (t && t.theme === 'light') document.documentElement.dataset.theme = 'light';
+        else if (t && t.theme === 'system') document.documentElement.removeAttribute('data-theme');
+      } catch (e) {}
+    </script>
+    <style>
+      /* Splash while the mock backend (service worker) and translations start */
+      #splash {
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        display: grid;
+        place-items: center;
+        background: #0b0a10;
+        transition: opacity 0.4s ease;
+      }
+      [data-theme='light'] #splash {
+        background: #f8f5ef;
+      }
+      #splash.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+      #splash .cap {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        background: #f2a7bf;
+        box-shadow: 0 8px 0 #c76788;
+        display: grid;
+        place-items: center;
+        animation: press 1s ease-in-out infinite;
+      }
+      #splash svg {
+        width: 34px;
+        height: 34px;
+        stroke: #2a1420;
+        stroke-width: 3.4;
+        stroke-linecap: round;
+        fill: none;
+      }
+      @keyframes press {
+        50% {
+          transform: translateY(6px);
+          box-shadow: 0 2px 0 #c76788;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #splash .cap {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="splash" aria-hidden="true">
+      <div class="cap">
+        <svg viewBox="0 0 40 40"><path d="M12 11h16M20 11v13M10 24h20" /></svg>
+      </div>
+    </div>
+    <noscript
+      >KŌBŌ Keys needs JavaScript: the whole shop, including its mock backend, runs in your browser.</noscript
+    >
+    <div id="root"></div>
+    <script type="module" src="/src/app/index.tsx"></script>
+  </body>
+</html>

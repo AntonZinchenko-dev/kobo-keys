@@ -1,0 +1,126 @@
+/**
+ * Temporary stock photos (Unsplash, free licence: https://unsplash.com/license).
+ *
+ * Every image in the shop is addressed by a *slot* ("products/sakura-65/01-main").
+ * While assets-src/<slot>.png does not exist, <Picture> shows the stock photo below,
+ * resized on the fly by the Unsplash CDN. Drop the real file into assets-src/, run
+ * `npm run images` — the slot switches to optimised local AVIF/WebP automatically.
+ * What each slot should show is described in assets-src/**\/README.md.
+ */
+export const STOCK: Record<string, string> = {
+  // Keyboards
+  'products/sakura-65/01-main': '1765030956556-503a3e881f27',
+  'products/sakura-65/02-top': '1777507067046-46dc45f6188e',
+  'products/sakura-65/03-detail': '1594199691118-52f4725c58ae',
+  'products/sakura-65/04-lifestyle': '1765030985356-e1bb4b3d31c4',
+  'products/sakura-65/01-main-black': '1594199690958-2966700b5f50',
+  'products/sakura-65/02-top-black': '1647097947896-50311f28611f',
+  'products/matcha-75/01-main': '1595044426077-d36d9236d54a',
+  'products/matcha-75/02-top': '1595225476474-87563907a212',
+  'products/matcha-75/03-detail': '1595045051853-05ef47bdfdbe',
+  'products/matcha-75/04-lifestyle': '1632079003110-d694908500da',
+  'products/sumi-tkl/01-main': '1589578228447-e1a4e481c6c8',
+  'products/sumi-tkl/02-top': '1555532538-dcdbd01d373d',
+  'products/sumi-tkl/03-detail': '1636858507939-acc6b17bda52',
+  'products/sumi-tkl/04-lifestyle': '1637243218672-d338945efdf7',
+  'products/neon-tokyo-60/01-main': '1592424002053-21f369ad7fdb',
+  'products/neon-tokyo-60/02-top': '1696995667338-0fe6aea78af1',
+  'products/neon-tokyo-60/03-detail': '1756388371476-2aff24d6fddb',
+  'products/neon-tokyo-60/04-lifestyle': '1647097947896-50311f28611f',
+  'products/fuji-75/01-main': '1628676633339-81fc485c635c',
+  'products/fuji-75/02-top': '1625130694338-4110ba634e59',
+  'products/fuji-75/03-detail': '1612198188060-c7c2a3b66eae',
+  'products/fuji-75/04-lifestyle': '1602025882379-e01cf08baa51',
+  'products/koi-65/01-main': '1618384887929-16ec33fab9ef',
+  'products/koi-65/02-top': '1626958390898-162d3577f293',
+  'products/koi-65/03-detail': '1616248304589-6a3d8d60ad7d',
+  'products/koi-65/04-lifestyle': '1712396901531-605f06a423aa',
+  'products/hinoki-65/01-main': '1601445638532-3c6f6c3aa1d6',
+  'products/hinoki-65/02-top': '1598662779094-110c2bad80b5',
+  'products/hinoki-65/03-detail': '1664813398575-819b46e5ab8d',
+  'products/hinoki-65/04-lifestyle': '1575318634028-6a0cfcb60c59',
+  'products/kitsune-split/01-main': '1635987391914-cb84b567e68f',
+  'products/kitsune-split/02-top': '1626958390943-a70309376444',
+  'products/kitsune-split/03-detail': '1626958390916-90be78b9bfe6',
+  'products/kitsune-split/04-lifestyle': '1594199691187-bdce7e4e5025',
+
+  // Keycap sets
+  'products/keycaps-sakura/01-main': '1777507067046-46dc45f6188e',
+  'products/keycaps-sakura/02-detail': '1612538811009-ed19118a2b53',
+  'products/keycaps-sakura/03-on-board': '1594199691118-52f4725c58ae',
+  'products/keycaps-matcha/01-main': '1595225476474-87563907a212',
+  'products/keycaps-matcha/02-detail': '1664813398575-819b46e5ab8d',
+  'products/keycaps-matcha/03-on-board': '1595044426077-d36d9236d54a',
+  'products/keycaps-sumi-e/01-main': '1612198188060-c7c2a3b66eae',
+  'products/keycaps-sumi-e/02-detail': '1547394765-185e1e68f34e',
+  'products/keycaps-sumi-e/03-on-board': '1636858507939-acc6b17bda52',
+  'products/keycaps-seigaiha/01-main': '1581351123004-757df051db8e',
+  'products/keycaps-seigaiha/02-detail': '1659215609160-fd5afc42b8ed',
+  'products/keycaps-seigaiha/03-on-board': '1592424002053-21f369ad7fdb',
+  'products/keycaps-koi/01-main': '1712396901531-605f06a423aa',
+  'products/keycaps-koi/02-detail': '1626958390898-162d3577f293',
+  'products/keycaps-koi/03-on-board': '1648392368628-6e984d89e2f3',
+  'products/keycaps-ramen-night/01-main': '1648392368628-6e984d89e2f3',
+  'products/keycaps-ramen-night/02-detail': '1601445638532-3c6f6c3aa1d6',
+  'products/keycaps-ramen-night/03-on-board': '1526920929362-5b26677c148c',
+  'products/keycaps-onsen/01-main': '1558050032-160f36233a07',
+  'products/keycaps-onsen/02-detail': '1595045051853-05ef47bdfdbe',
+  'products/keycaps-onsen/03-on-board': '1622036832712-d77986bccedd',
+  'products/keycaps-lantern/01-main': '1626958390943-a70309376444',
+  'products/keycaps-lantern/02-detail': '1626958390916-90be78b9bfe6',
+  'products/keycaps-lantern/03-on-board': '1635987391914-cb84b567e68f',
+
+  // Switches
+  'products/switch-silk-linear/01-main': '1632125972828-a4cfdec70f00',
+  'products/switch-silk-linear/02-exploded': '1664813398575-819b46e5ab8d',
+  'products/switch-silk-linear/03-group': '1659215609160-fd5afc42b8ed',
+  'products/switch-bamboo-tactile/01-main': '1659215609160-fd5afc42b8ed',
+  'products/switch-bamboo-tactile/02-exploded': '1632125972828-a4cfdec70f00',
+  'products/switch-bamboo-tactile/03-group': '1598662779094-110c2bad80b5',
+  'products/switch-taiko-clicky/01-main': '1664813398575-819b46e5ab8d',
+  'products/switch-taiko-clicky/02-exploded': '1659215609160-fd5afc42b8ed',
+  'products/switch-taiko-clicky/03-group': '1632125972828-a4cfdec70f00',
+  'products/switch-mochi-silent/01-main': '1598662779094-110c2bad80b5',
+  'products/switch-mochi-silent/02-exploded': '1632125972828-a4cfdec70f00',
+  'products/switch-mochi-silent/03-group': '1664813398575-819b46e5ab8d',
+
+  // Accessories
+  'products/deskmat-seigaiha/01-main': '1587831990711-23ca6441447b',
+  'products/deskmat-seigaiha/02-detail': '1510519138101-570d1dca3d66',
+  'products/deskmat-seigaiha/03-lifestyle': '1679666600450-827f3486b4b3',
+  'products/cable-sakura/01-main': '1607125516845-fa8a14db083a',
+  'products/cable-sakura/02-detail': '1572721546624-05bf65ad7679',
+  'products/cable-sakura/03-lifestyle': '1595756630452-736bc8ef3693',
+  'products/wristrest-hinoki/01-main': '1575318634028-6a0cfcb60c59',
+  'products/wristrest-hinoki/02-detail': '1629317422263-9317e911014a',
+  'products/wristrest-hinoki/03-lifestyle': '1594636797501-ef436e157819',
+  'products/artisan-shiba/01-main': '1608617878675-4d9df7cb7f92',
+  'products/artisan-shiba/02-detail': '1625522164841-091e80295994',
+  'products/artisan-shiba/03-lifestyle': '1728439652757-ac99cb657b0e',
+
+  // Marketing (hero and hero-mobile are already real — see assets-src/marketing)
+  'marketing/collection-sakura': '1528493695782-15c16f2c42f9',
+  'marketing/collection-matcha': '1589698272390-0501a07619bb',
+  'marketing/collection-sumi': '1558240077-1a386f2f0711',
+  'marketing/collection-neon': '1601042879364-f3947d3f9c16',
+  'marketing/drop-desktop': '1621269616698-4a10f313f8e6',
+  'marketing/drop-mobile': '1725866948564-5592bdff0bd5',
+  'marketing/club-box': '1674620213535-9b2a2553ef40',
+  'marketing/workshop': '1640955785023-1854685dae05',
+  'marketing/setup-01': '1587831990711-23ca6441447b',
+  'marketing/setup-02': '1679666600450-827f3486b4b3',
+  'marketing/setup-03': '1616440347437-b1c73416efc2',
+  'marketing/setup-04': '1621743018966-29194999d736',
+
+  // Mascot "Kobo" — a real shiba as a placeholder for the illustrated character
+  'mascot/hello': '1575535468632-345892291673',
+  'mascot/empty-cart': '1509119993276-d691aff73209',
+  'mascot/not-found': '1602683089825-90ede3e7ef10',
+  'mascot/error': '1609114450169-f0656f84799e',
+  'mascot/offline': '1567225591450-06036b3392a6',
+  'mascot/success': '1737050440951-661aa2c3a1e6',
+  'mascot/typing': '1578133559556-9e83af5fc5f3',
+};
+
+export const stockUrl = (photoId: string, width: number, height: number, format: 'avif' | 'webp' | 'jpg') =>
+  `https://images.unsplash.com/photo-${photoId}?w=${width}&h=${height}&fit=crop&crop=entropy&fm=${format}&q=${format === 'avif' ? 55 : 70}`;

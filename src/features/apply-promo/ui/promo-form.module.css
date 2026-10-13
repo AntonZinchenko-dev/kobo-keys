@@ -1,0 +1,23 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: var(--space-2);
+}
+
+.button {
+  margin-top: 26px;
+  min-height: 48px;
+}
+
+.applied {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+}
+
+.applied span {
+  flex: 1;
+  color: var(--mist);
+}

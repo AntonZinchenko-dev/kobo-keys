@@ -1,0 +1,130 @@
+.field {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  min-height: 48px;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1rem; /* ≥16px — iOS does not zoom into the field */
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.input::placeholder {
+  color: color-mix(in oklch, var(--mist), transparent 30%);
+}
+
+.input:focus-visible {
+  outline: none;
+  border-color: var(--sakura);
+  box-shadow: 0 0 0 4px color-mix(in oklch, var(--sakura), transparent 78%);
+}
+
+.textarea {
+  min-height: 96px;
+  resize: vertical;
+  field-sizing: content; /* grows with the text where supported */
+}
+
+.invalid .input {
+  border-color: var(--danger);
+}
+
+.hint {
+  color: var(--mist);
+  font-size: var(--text-xs);
+}
+
+.error {
+  color: var(--danger);
+  font-size: var(--text-xs);
+  font-weight: 500;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 40px;
+  cursor: pointer;
+  font-size: var(--text-sm);
+}
+
+.disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.checkInput {
+  flex: none;
+  appearance: none;
+  display: grid;
+  place-content: center;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  border: 1.5px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface);
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+
+.checkInput[type='radio'] {
+  border-radius: 50%;
+}
+
+.checkInput::after {
+  content: '';
+  width: 10px;
+  height: 6px;
+  border: 2px solid var(--on-sakura);
+  border-top: 0;
+  border-right: 0;
+  rotate: -45deg;
+  translate: 0 -1px;
+  scale: 0;
+  transition: scale 0.2s var(--ease-spring);
+}
+
+.checkInput[type='radio']::after {
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--on-sakura);
+  rotate: none;
+  translate: none;
+}
+
+.checkInput:checked {
+  border-color: var(--sakura);
+  background: var(--sakura);
+}
+
+.checkInput:checked::after {
+  scale: 1;
+}
+
+.checkLabel {
+  flex: 1;
+}
+
+.count {
+  color: var(--mist);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Keyboard builder",
+  "lead": "Build your keyboard step by step: the preview and price update instantly, and you can share your build with a link.",
+  "preview": "Keyboard preview",
+  "previewTitle": "{layout} keyboard, {caseName} case, {caps} keycaps",
+  "undo": "Undo (Ctrl+Z)",
+  "redo": "Redo (Ctrl+Shift+Z)",
+  "share": "Copy link to this build",
+  "shareHint": "Send it to a friend — they'll see exactly the same keyboard",
+  "download": "Download image",
+  "steps": {
+    "layout": "Layout",
+    "case": "Case",
+    "keycaps": "Keycaps",
+    "switches": "Switches",
+    "lighting": "Lighting",
+    "engraving": "Spacebar engraving"
+  },
+  "keys": "{count, plural, one {# key} other {# keys}}",
+  "switchType": {
+    "linear": "linear",
+    "tactile": "tactile",
+    "clicky": "clicky",
+    "silent": "silent"
+  },
+  "engravingLabel": "Text on the spacebar",
+  "engravingHint": "Up to {count} characters, +{price}",
+  "total": "Total",
+  "breakdown": "Price breakdown",
+  "parts": {
+    "layout": "PCB and plate",
+    "case": "Case",
+    "keycaps": "Keycaps",
+    "switches": "Switches",
+    "lighting": "Lighting",
+    "engraving": "Engraving"
+  },
+  "ready": "Built and shipped by {date}",
+  "addToCart": "Add build to cart",
+  "customBuild": "Custom build"
+}

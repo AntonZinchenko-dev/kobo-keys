@@ -1,0 +1,15 @@
+.form {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.sent {
+  color: var(--mist);
+}
+
+.code {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  letter-spacing: 0.5em;
+  text-align: center;
+}

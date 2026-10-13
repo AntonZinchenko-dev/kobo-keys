@@ -1,0 +1,36 @@
+.wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: 40px;
+  padding-inline: var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--mist);
+  cursor: pointer;
+}
+
+.wrap:focus-within {
+  border-color: var(--sakura);
+}
+
+.select {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  padding-inline-end: var(--space-1);
+}
+
+.select:focus {
+  outline: none;
+}
+
+.select option {
+  background: var(--surface);
+  color: var(--text);
+}

@@ -1,0 +1,45 @@
+.root {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+}
+
+.compact {
+  padding: var(--space-6) var(--space-3);
+}
+
+.mascot {
+  width: clamp(120px, 30vw, 168px);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 6px var(--surface-2),
+    0 0 0 7px var(--line);
+  animation: bob 3.5s ease-in-out infinite;
+}
+
+.compact .mascot {
+  width: 104px;
+}
+
+@keyframes bob {
+  50% {
+    translate: 0 -6px;
+  }
+}
+
+.title {
+  margin-top: var(--space-3);
+  font-size: var(--text-xl);
+}
+
+.text {
+  max-width: 44ch;
+  color: var(--mist);
+}
+
+.action {
+  margin-top: var(--space-3);
+}

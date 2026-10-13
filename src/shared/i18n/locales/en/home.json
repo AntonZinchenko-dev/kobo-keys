@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "title": "KŌBŌ Keys — mechanical keyboard workshop",
+    "description": "Mechanical keyboards, keycaps and switches with a Japanese soul. Build your own keyboard online."
+  },
+  "hero": {
+    "imageAlt": "A mechanical keyboard exploded into layers among cherry blossom petals",
+    "kicker": "mechanical keyboard workshop",
+    "title1": "Keyboards",
+    "title2": "you want to touch",
+    "text": "Hand-assembled, every switch lubed, every sound checked. Pick a ready-made board or build your own — from the case to the engraving on the spacebar.",
+    "ctaCatalog": "Browse the shop",
+    "ctaBuilder": "Build your own",
+    "stat1": "keyboards built",
+    "stat2": "average rating",
+    "stat3": "ships from the workshop"
+  },
+  "marquee": {
+    "label": "Why KŌBŌ",
+    "handmade": "Hand-assembled",
+    "hotswap": "Hot-swap, no soldering",
+    "shipping": "Free shipping over €150",
+    "returns": "30-day returns",
+    "warranty": "2-year warranty",
+    "lubed": "Lubed switches"
+  },
+  "bestsellers": "Workshop favourites",
+  "allProducts": "View all",
+  "bento": {
+    "title": "Collections",
+    "lead": "Four moods — from morning tea to Tokyo at night. Tap a tile to see everything in that colour.",
+    "sakura": {
+      "kanji": "桜",
+      "title": "Sakura",
+      "text": "Pastel pink setups for those who love spring all year round."
+    },
+    "matcha": {
+      "kanji": "抹茶",
+      "title": "Matcha",
+      "text": "Calm green and cream — like a tea ceremony on your desk."
+    },
+    "sumi": { "kanji": "墨", "title": "Sumi", "text": "Minimalism as black as ink." },
+    "neon": { "kanji": "夜", "title": "Neon", "text": "Clear cases and RGB for night sessions." }
+  },
+  "drop": {
+    "badge": "Drop of the week",
+    "title": "Lantern keycap set",
+    "text": "The deep red and gold of paper lanterns. A limited run — once it is gone, it is gone.",
+    "endsIn": "Drop ends in",
+    "days": "d",
+    "hours": "h",
+    "minutes": "min",
+    "seconds": "sec",
+    "left": "{count, plural, one {# set left} other {# sets left}}",
+    "more": "Details"
+  },
+  "builder": {
+    "kicker": "Builder",
+    "title": "Build the keyboard of your dreams",
+    "text": "Choose a layout, case, keycaps, switches and lighting — the preview and price update instantly. Share your build with a link.",
+    "cta": "Open the builder",
+    "previewAlt": "A keyboard preview from the builder with RGB lighting"
+  },
+  "workshop": {
+    "imageAlt": "The workshop bench: tools, switches and a desk lamp",
+    "kicker": "About the workshop",
+    "title": "Every keyboard passes through a builder's hands",
+    "text": "We don't ship boxes from a warehouse. Every keyboard is assembled, its stabilisers lubed, every key tested — and only then packed.",
+    "point1": "Hand-lubed switches and stabilisers",
+    "point2": "Every key tested before shipping",
+    "point3": "Plastic-free packaging"
+  },
+  "reviews": {
+    "title": "Our customers' setups",
+    "photoAlt": "A customer's desk with a KŌBŌ keyboard",
+    "stars": "5 out of 5",
+    "items": {
+      "1": {
+        "text": "It sounds so good I type just for the sound. The unboxing is a treat on its own.",
+        "author": "Kasia, Warsaw"
+      },
+      "2": {
+        "text": "Built it in the configurator and a week later I held exactly what I had seen on screen.",
+        "author": "Ren, Berlin"
+      },
+      "3": {
+        "text": "My third keyboard from here. Light through a clear case is pure magic.",
+        "author": "Mateusz, Kraków"
+      },
+      "4": {
+        "text": "The wooden case smells of cypress. I never thought a keyboard could feel cosy.",
+        "author": "Anna, Gdańsk"
+      }
+    }
+  },
+  "club": {
+    "title": "New keycaps every month",
+    "text": "Keycap Club is a subscription for those who love changing the mood of their desk. A set every month, early access to drops and discounts.",
+    "cta": "Discover the club",
+    "imageAlt": "A subscription box with keycaps wrapped in washi paper"
+  },
+  "newsletter": {
+    "title": "Letters from the workshop",
+    "text": "Once a month: new drops, build stories and subscriber-only promo codes.",
+    "label": "Your email",
+    "cta": "Subscribe",
+    "invalid": "Please check the email address",
+    "done": "Done! The first letter is on its way."
+  }
+}

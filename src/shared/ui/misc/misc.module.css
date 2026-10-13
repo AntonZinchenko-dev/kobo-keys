@@ -1,0 +1,240 @@
+.skeleton {
+  display: block;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(100deg, var(--surface-2) 30%, var(--surface-3) 50%, var(--surface-2) 70%);
+  background-size: 250% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 150% 0;
+  }
+
+  to {
+    background-position: -100% 0;
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--line);
+  border-top-color: var(--sakura);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    rotate: 1turn;
+  }
+}
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-xs);
+}
+
+.stars {
+  --star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.6 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z'/%3E%3C/svg%3E");
+
+  display: inline-block;
+  width: calc(var(--size) * 5);
+  height: var(--size);
+  background: linear-gradient(90deg, var(--gold) var(--value), var(--surface-3) var(--value));
+  mask: var(--star) left / var(--size) var(--size) repeat-x;
+}
+
+.ratingValue {
+  font-weight: 600;
+}
+
+.ratingCount {
+  color: var(--mist);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sakura {
+  background: var(--sakura);
+  color: var(--on-sakura);
+}
+
+.matcha {
+  background: color-mix(in oklch, var(--matcha), transparent 78%);
+  color: var(--matcha);
+}
+
+.gold {
+  background: color-mix(in oklch, var(--gold), transparent 75%);
+  color: var(--gold);
+}
+
+.danger {
+  background: color-mix(in oklch, var(--danger), transparent 82%);
+  color: light-dark(oklch(45% 0.19 25deg), oklch(82% 0.12 25deg));
+}
+
+.kbd {
+  display: inline-grid;
+  place-items: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 6px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  box-shadow: 0 2px 0 var(--line);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.quantity {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.quantity button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: transparent;
+  border-radius: 11px;
+}
+
+.quantity button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.quantity output {
+  min-width: 2ch;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  text-align: center;
+}
+
+.accordion {
+  border-bottom: 1px solid var(--line);
+}
+
+.accordion summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4) 0;
+  font-weight: 600;
+  list-style: none;
+  cursor: pointer;
+}
+
+.accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.chevron {
+  flex: none;
+  transition: rotate 0.3s var(--ease-out);
+}
+
+.accordion[open] .chevron {
+  rotate: 180deg;
+}
+
+/* Smooth open/close to height:auto */
+.accordion::details-content {
+  block-size: 0;
+  overflow: clip;
+  transition:
+    block-size 0.35s var(--ease-out),
+    content-visibility 0.35s allow-discrete;
+}
+
+.accordion[open]::details-content {
+  block-size: auto;
+}
+
+.accordionBody {
+  padding-bottom: var(--space-4);
+  color: var(--mist);
+}
+
+.segmented {
+  position: relative;
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+
+.segment {
+  position: relative;
+  min-height: 38px;
+  padding: 0 var(--space-4);
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--mist);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  transition:
+    background 0.25s,
+    color 0.25s;
+}
+
+.segmentActive {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 4px 12px -6px var(--shadow-color);
+}
+
+/* Infinite ticker on pure CSS — two copies of the list slide by exactly one width */
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
+
+.marqueeTrack {
+  display: flex;
+  flex: none;
+  gap: var(--space-7);
+  min-width: 100%;
+  margin: 0;
+  padding: 0 var(--space-7) 0 0;
+  list-style: none;
+  animation: marquee 32s linear infinite;
+}
+
+.marquee:hover .marqueeTrack {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  to {
+    translate: -100% 0;
+  }
+}

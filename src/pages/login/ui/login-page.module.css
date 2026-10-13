@@ -1,0 +1,37 @@
+.page {
+  display: grid;
+  place-items: center;
+  padding-block: var(--space-7);
+}
+
+.card {
+  display: grid;
+  gap: var(--space-4);
+  width: min(100%, 440px);
+  padding: var(--space-6);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  text-align: center;
+}
+
+.card form {
+  text-align: start;
+}
+
+.mascot {
+  justify-self: center;
+  width: 112px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.card h1 {
+  font-size: var(--text-xl);
+}
+
+.lead,
+.demo {
+  color: var(--mist);
+  font-size: var(--text-sm);
+}

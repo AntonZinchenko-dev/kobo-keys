@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "title": "KŌBŌ Keys — pracownia klawiatur mechanicznych",
+    "description": "Klawiatury mechaniczne, klawisze i przełączniki z japońską duszą. Skonfiguruj własną klawiaturę online."
+  },
+  "hero": {
+    "imageAlt": "Klawiatura mechaniczna rozłożona na warstwy wśród płatków wiśni",
+    "kicker": "pracownia klawiatur mechanicznych",
+    "title1": "Klawiatury,",
+    "title2": "których chce się dotykać",
+    "text": "Składamy ręcznie, smarujemy każdy przełącznik i sprawdzamy brzmienie. Wybierz gotową albo złóż własną — od obudowy po grawer na spacji.",
+    "ctaCatalog": "Zobacz sklep",
+    "ctaBuilder": "Złóż własną",
+    "stat1": "złożonych klawiatur",
+    "stat2": "średnia ocena",
+    "stat3": "wysyłka z pracowni"
+  },
+  "marquee": {
+    "label": "Nasze zalety",
+    "handmade": "Ręczny montaż",
+    "hotswap": "Hot-swap bez lutowania",
+    "shipping": "Darmowa dostawa od 150 €",
+    "returns": "30 dni na zwrot",
+    "warranty": "2 lata gwarancji",
+    "lubed": "Smarowane przełączniki"
+  },
+  "bestsellers": "Hity pracowni",
+  "allProducts": "Cały sklep",
+  "bento": {
+    "title": "Kolekcje",
+    "lead": "Cztery nastroje — od porannej herbaty po Tokio nocą. Kliknij kafelek, by zobaczyć wszystko w tym kolorze.",
+    "sakura": {
+      "kanji": "桜",
+      "title": "Sakura",
+      "text": "Pastelowo-różowe setupy dla tych, którzy kochają wiosnę cały rok."
+    },
+    "matcha": {
+      "kanji": "抹茶",
+      "title": "Matcha",
+      "text": "Spokojna zieleń i krem — jak ceremonia herbaty na biurku."
+    },
+    "sumi": { "kanji": "墨", "title": "Sumi", "text": "Minimalizm czarny jak tusz." },
+    "neon": { "kanji": "夜", "title": "Neon", "text": "Przezroczyste obudowy i RGB na nocne sesje." }
+  },
+  "drop": {
+    "badge": "Drop tygodnia",
+    "title": "Zestaw klawiszy Lantern",
+    "text": "Głęboka czerwień i złoto papierowych lampionów. Limitowany nakład — gdy się skończy, nie wróci.",
+    "endsIn": "Do końca dropu",
+    "days": "dni",
+    "hours": "godz",
+    "minutes": "min",
+    "seconds": "sek",
+    "left": "{count, plural, one {Został # zestaw} few {Zostały # zestawy} many {Zostało # zestawów} other {Zostało # zestawu}}",
+    "more": "Szczegóły"
+  },
+  "builder": {
+    "kicker": "Konfigurator",
+    "title": "Złóż klawiaturę swoich marzeń",
+    "text": "Wybierz układ, obudowę, klawisze, przełączniki i podświetlenie — podgląd i cena zmieniają się od razu. Konfiguracją możesz się podzielić linkiem.",
+    "cta": "Otwórz konfigurator",
+    "previewAlt": "Podgląd klawiatury z konfiguratora z podświetleniem RGB"
+  },
+  "workshop": {
+    "imageAlt": "Stół warsztatowy: narzędzia, przełączniki i lampka",
+    "kicker": "O pracowni",
+    "title": "Każda klawiatura przechodzi przez ręce mistrza",
+    "text": "Nie wysyłamy pudełek z magazynu. Każdą klawiaturę składamy, smarujemy stabilizatory, testujemy wszystkie klawisze i dopiero wtedy pakujemy.",
+    "point1": "Ręczne smarowanie przełączników i stabilizatorów",
+    "point2": "Test każdego klawisza przed wysyłką",
+    "point3": "Opakowanie bez plastiku"
+  },
+  "reviews": {
+    "title": "Setupy naszych klientów",
+    "photoAlt": "Biurko klienta z klawiaturą KŌBŌ",
+    "stars": "5 na 5",
+    "items": {
+      "1": {
+        "text": "Brzmi tak, że piszę dla samego dźwięku. Rozpakowanie to osobna przyjemność.",
+        "author": "Kasia, Warszawa"
+      },
+      "2": {
+        "text": "Złożyłem w konfiguratorze, a po tygodniu miałem w rękach dokładnie to, co na ekranie.",
+        "author": "Ren, Berlin"
+      },
+      "3": {
+        "text": "Trzecia klawiatura stąd. Światło przez przezroczystą obudowę to magia.",
+        "author": "Mateusz, Kraków"
+      },
+      "4": {
+        "text": "Drewniana obudowa pachnie cyprysem. Nie sądziłam, że klawiatura może być przytulna.",
+        "author": "Anna, Gdańsk"
+      }
+    }
+  },
+  "club": {
+    "title": "Nowe klawisze co miesiąc",
+    "text": "Keycap Club to subskrypcja dla tych, którzy lubią zmieniać nastrój biurka. Zestaw co miesiąc, wcześniejszy dostęp do dropów i rabaty.",
+    "cta": "Poznaj klub",
+    "imageAlt": "Pudełko subskrypcji z klawiszami w papierze washi"
+  },
+  "newsletter": {
+    "title": "Listy z pracowni",
+    "text": "Raz w miesiącu: nowe dropy, historie konfiguracji i kody rabatowe tylko dla subskrybentów.",
+    "label": "Twój e-mail",
+    "cta": "Zapisz się",
+    "invalid": "Sprawdź adres e-mail",
+    "done": "Gotowe! Pierwszy list jest już w drodze."
+  }
+}

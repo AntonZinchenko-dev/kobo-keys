@@ -1,0 +1,32 @@
+{
+  "marketing/hero": {
+    "width": 3840,
+    "height": 2161,
+    "widths": [
+      480,
+      768,
+      1080,
+      1440,
+      1920,
+      2560
+    ],
+    "jpg": 1080,
+    "blur": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADwAQCdASoQAAkAA4BaJQBdgCF57qeDBAAA/vkRHZIOAvHUGOuq9BvMHYyd+raIwsAAAA==",
+    "color": "rgb(8 8 8)",
+    "hash": "2140e7098c94"
+  },
+  "marketing/hero-mobile": {
+    "width": 1440,
+    "height": 2560,
+    "widths": [
+      480,
+      768,
+      1080,
+      1440
+    ],
+    "jpg": 1080,
+    "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAwCdASoQABwAPu1iqU2ppaOiMAgBMB2JYwABSgxn4jYwnAAA/vsgOg9csguSDq5jIhotSR2ZbtdA3O+mxeBRjT7gAA==",
+    "color": "rgb(8 8 8)",
+    "hash": "70bfe539a12c"
+  }
+}

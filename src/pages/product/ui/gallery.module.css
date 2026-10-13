@@ -1,0 +1,111 @@
+.gallery {
+  position: relative;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border-radius: var(--radius-lg);
+  background: var(--surface-2);
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  overflow: hidden;
+  scroll-snap-align: start;
+  cursor: zoom-in;
+}
+
+.slide img {
+  transition:
+    scale 0.3s var(--ease-out),
+    opacity 0.5s var(--ease-out),
+    filter 0.6s var(--ease-out);
+}
+
+/* Zoom: scale 2× with the origin at the cursor */
+.zooming img {
+  scale: 2;
+  transform-origin: var(--zx) var(--zy);
+}
+
+.expand {
+  position: absolute;
+  inset-block-start: var(--space-3);
+  inset-inline-end: var(--space-3);
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+}
+
+.dots {
+  position: absolute;
+  inset: auto 0 calc(var(--space-3) + 96px);
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background: rgb(255 255 255 / 50%);
+  transition: width 0.3s var(--ease-out);
+}
+
+.dotActive {
+  width: 20px;
+  background: var(--sakura);
+}
+
+.thumbs {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+}
+
+.thumb {
+  flex: none;
+  width: 80px;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  background: none;
+  opacity: 0.6;
+  transition:
+    opacity 0.2s,
+    border-color 0.2s;
+}
+
+.thumbActive {
+  border-color: var(--sakura);
+  opacity: 1;
+}
+
+.full {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (width >= 1024px) {
+  .dots {
+    display: none;
+  }
+}

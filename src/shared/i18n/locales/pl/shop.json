@@ -1,0 +1,123 @@
+{
+  "catalog": {
+    "title": "Sklep",
+    "description": "Klawiatury mechaniczne, klawisze, przełączniki i akcesoria KŌBŌ Keys z filtrami po układzie, przełącznikach i kolorze.",
+    "breadcrumbs": "Okruszki",
+    "searchFor": "Wyniki dla „{q}”.",
+    "clearSearch": "Wyczyść wyszukiwanie",
+    "categories": "Kategorie",
+    "all": "Wszystko",
+    "empty": "Nic nie znaleziono",
+    "emptyText": "Kobo przeszukał całą pracownię. Spróbuj usunąć kilka filtrów.",
+    "shown": "Pokazano {shown} z {total}",
+    "compareNow": "Porównaj ({count})"
+  },
+  "filters": {
+    "title": "Filtry",
+    "availability": "Dostępność",
+    "inStock": "Tylko dostępne",
+    "layout": "Układ",
+    "switch": "Typ przełączników",
+    "color": "Kolor",
+    "price": "Cena",
+    "priceFrom": "Cena od",
+    "priceTo": "Cena do",
+    "products": "{count, plural, one {# produkt} few {# produkty} many {# produktów} other {# produktu}}",
+    "reset": "Wyczyść filtry",
+    "show": "{count, plural, =0 {Nic nie znaleziono} one {Pokaż # produkt} few {Pokaż # produkty} many {Pokaż # produktów} other {Pokaż # produktu}}",
+    "active": "Aktywne filtry",
+    "removeOne": "Usuń filtr „{name}”"
+  },
+  "layouts": {
+    "60": "60% — kompaktowa",
+    "65": "65% — ze strzałkami",
+    "75": "75% — z rzędem F",
+    "tkl": "TKL — bez numerycznej",
+    "split": "Split"
+  },
+  "switchTypes": {
+    "linear": "Liniowe",
+    "tactile": "Taktylne",
+    "clicky": "Klikające",
+    "silent": "Ciche"
+  },
+  "sort": {
+    "label": "Sortowanie",
+    "popular": "Popularne",
+    "new": "Nowości",
+    "price-asc": "Od najtańszych",
+    "price-desc": "Od najdroższych",
+    "rating": "Według oceny"
+  },
+  "options": {
+    "color": "Kolor",
+    "switch": "Przełączniki",
+    "size": "Rozmiar",
+    "kit": "Zestaw"
+  },
+  "specs": {
+    "layout": "Układ",
+    "case": "Obudowa",
+    "plate": "Płytka",
+    "mount": "Montaż",
+    "hotswap": "Hot-swap",
+    "connection": "Połączenie",
+    "weight": "Waga",
+    "material": "Materiał",
+    "profile": "Profil",
+    "keys": "Klawisze",
+    "actuation": "Siła nacisku",
+    "travel": "Skok",
+    "size": "Rozmiar",
+    "length": "Długość"
+  },
+  "product": {
+    "photo": "zdjęcie {n}",
+    "photos": "Zdjęcia produktu",
+    "fullscreen": "Otwórz zdjęcia na pełnym ekranie",
+    "closeFullscreen": "Zamknij",
+    "notFound": "Nie ma takiego produktu",
+    "listen": "Posłuchaj brzmienia",
+    "inStock": "Dostępne, wyślemy jutro",
+    "perkShipping": "Darmowa dostawa od 150 €",
+    "perkReturns": "30 dni na zwrot",
+    "perkWarranty": "2 lata gwarancji",
+    "description": "Opis",
+    "specs": "Specyfikacja",
+    "together": "Często kupowane razem",
+    "related": "Podobne produkty"
+  },
+  "reviews": {
+    "title": "Opinie",
+    "average": "Średnia ocena {rating} na 5",
+    "count": "{count, plural, one {# opinia} few {# opinie} many {# opinii} other {# opinii}}",
+    "filtered": "Pokazano opinie z oceną {rating}.",
+    "showAll": "Pokaż wszystkie",
+    "verified": "Potwierdzony zakup",
+    "stars": "{rating} na 5",
+    "photo": "Zdjęcie od klienta",
+    "helpful": "Pomocne",
+    "pages": "Strony opinii",
+    "prev": "Wstecz",
+    "next": "Dalej"
+  },
+  "wishlist": {
+    "title": "Ulubione",
+    "empty": "Na razie pusto",
+    "emptyText": "Klikaj ♡ na kartach — ulubione produkty poczekają tutaj.",
+    "clear": "Wyczyść"
+  },
+  "compare": {
+    "title": "Porównanie",
+    "empty": "Nie ma czego porównać",
+    "emptyText": "Dodaj co najmniej dwa produkty przyciskiem porównania na karcie.",
+    "onlyDiff": "Tylko różnice",
+    "clear": "Wyczyść",
+    "price": "Cena",
+    "rating": "Ocena",
+    "category": "Kategoria",
+    "availability": "Dostępność",
+    "remove": "Usuń",
+    "feature": "Cecha"
+  }
+}

@@ -1,0 +1,56 @@
+.svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.case {
+  transition: fill 0.5s var(--ease-out);
+}
+
+.light {
+  fill: var(--sakura);
+  filter: blur(4px);
+  opacity: 0.9;
+}
+
+.engraving {
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+}
+
+/* Breathing: the whole underglow pulses */
+.breathing .light {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  50% {
+    opacity: 0.15;
+  }
+}
+
+/* RGB wave: --hue is a registered @property, so it can be animated; each key offsets it by its position */
+.wave .light {
+  fill: oklch(72% 0.2 calc(var(--hue) + var(--k) * 9));
+  animation: hue 4s linear infinite;
+}
+
+@keyframes hue {
+  from {
+    --hue: 0;
+  }
+
+  to {
+    --hue: 360;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave .light,
+  .breathing .light {
+    animation: none;
+  }
+}

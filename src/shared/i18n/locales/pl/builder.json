@@ -1,0 +1,41 @@
+{
+  "title": "Konfigurator klawiatury",
+  "lead": "Złóż klawiaturę krok po kroku: podgląd i cena zmieniają się od razu, a konfiguracją możesz się podzielić linkiem.",
+  "preview": "Podgląd klawiatury",
+  "previewTitle": "Klawiatura {layout}, obudowa „{caseName}”, klawisze {caps}",
+  "undo": "Cofnij (Ctrl+Z)",
+  "redo": "Ponów (Ctrl+Shift+Z)",
+  "share": "Skopiuj link do konfiguracji",
+  "shareHint": "Wyślij znajomemu — zobaczy dokładnie tę samą klawiaturę",
+  "download": "Pobierz obrazek",
+  "steps": {
+    "layout": "Układ",
+    "case": "Obudowa",
+    "keycaps": "Klawisze",
+    "switches": "Przełączniki",
+    "lighting": "Podświetlenie",
+    "engraving": "Grawer na spacji"
+  },
+  "keys": "{count, plural, one {# klawisz} few {# klawisze} many {# klawiszy} other {# klawisza}}",
+  "switchType": {
+    "linear": "liniowe",
+    "tactile": "taktylne",
+    "clicky": "klikające",
+    "silent": "ciche"
+  },
+  "engravingLabel": "Tekst na spacji",
+  "engravingHint": "Do {count} znaków, +{price}",
+  "total": "Razem",
+  "breakdown": "Z czego cena",
+  "parts": {
+    "layout": "Płytka PCB i płyta",
+    "case": "Obudowa",
+    "keycaps": "Klawisze",
+    "switches": "Przełączniki",
+    "lighting": "Podświetlenie",
+    "engraving": "Grawer"
+  },
+  "ready": "Złożymy i wyślemy do {date}",
+  "addToCart": "Dodaj konfigurację do koszyka",
+  "customBuild": "Własna konfiguracja"
+}

@@ -1,0 +1,246 @@
+.page {
+  padding-bottom: var(--space-7);
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  align-items: end;
+  min-height: clamp(320px, 45vw, 520px);
+  overflow: hidden;
+  isolation: isolate;
+  color: oklch(97% 0.01 85deg);
+}
+
+.heroImage {
+  position: absolute !important;
+  inset: 0;
+  z-index: -1;
+  height: 100%;
+  aspect-ratio: auto !important;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgb(8 6 10 / 92%), rgb(8 6 10 / 25%));
+}
+
+.heroText {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-3);
+  padding-block: var(--space-7);
+}
+
+.heroText h1 {
+  max-width: 18ch;
+  font-size: var(--text-3xl);
+}
+
+.heroText p {
+  max-width: 52ch;
+  color: oklch(85% 0.02 290deg);
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  margin: var(--space-7) 0 var(--space-6);
+}
+
+.save {
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--matcha);
+  color: oklch(20% 0.05 135deg);
+  font-size: 11px;
+}
+
+.plans {
+  display: grid;
+  gap: var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (width >= 900px) {
+  .plans {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+}
+
+.plan {
+  position: relative;
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-6) var(--space-5);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+/* The popular plan gets a rotating gradient border (registered --angle) and sits a bit higher */
+.highlight {
+  --angle: 0deg;
+
+  border: 2px solid transparent;
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    conic-gradient(from var(--angle), var(--sakura), var(--gold), var(--matcha), var(--sakura)) border-box;
+  animation: spin 5s linear infinite;
+}
+
+@media (width >= 900px) {
+  .highlight {
+    padding-block: var(--space-7);
+  }
+}
+
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.ribbon {
+  position: absolute;
+  inset-block-start: -14px;
+  inset-inline-start: 50%;
+  translate: -50% 0;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: var(--sakura);
+  color: var(--on-sakura);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.plan h2 {
+  font-size: var(--text-xl);
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  animation: price-flip 0.45s var(--ease-spring);
+}
+
+@keyframes price-flip {
+  from {
+    opacity: 0;
+    translate: 0 -12px;
+    filter: blur(4px);
+  }
+}
+
+.price > span:last-child {
+  color: var(--mist);
+  font-size: var(--text-sm);
+}
+
+.billed {
+  display: flex;
+  gap: var(--space-1);
+  align-items: baseline;
+  color: var(--mist);
+  font-size: var(--text-xs);
+}
+
+.features {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+}
+
+.features li {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.features svg {
+  flex: none;
+  margin-top: 3px;
+  color: var(--matcha);
+}
+
+.compare,
+.faq {
+  margin-top: var(--space-8);
+}
+
+.compare h2,
+.faq h2 {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-xl);
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+
+.table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.table th,
+.table td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+
+.table th[scope='row'] {
+  text-align: start;
+  font-weight: 500;
+  color: var(--mist);
+}
+
+.table thead th {
+  background: var(--surface-2);
+  font-family: var(--font-display);
+}
+
+.table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.table tbody tr:hover {
+  background: var(--surface);
+}
+
+.yes {
+  color: var(--matcha);
+  font-weight: 700;
+}
+
+.no {
+  color: var(--mist);
+  opacity: 0.6;
+}
+
+.confirm {
+  display: grid;
+  gap: var(--space-3);
+  justify-items: center;
+  text-align: center;
+}
+
+.demoNote {
+  color: var(--mist);
+  font-size: var(--text-xs);
+}

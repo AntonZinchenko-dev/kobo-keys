@@ -1,0 +1,26 @@
+[
+  {
+    "name": "App JS on first load (without the mock backend)",
+    "path": [
+      "dist/assets/app-*.js",
+      "dist/assets/react-*.js",
+      "dist/assets/query-*.js",
+      "dist/assets/i18n-*.js",
+      "dist/assets/vendor-*.js"
+    ],
+    "limit": "180 kB",
+    "gzip": true
+  },
+  {
+    "name": "Mock backend (MSW + data), loaded in parallel",
+    "path": ["dist/assets/mocks-*.js", "dist/assets/browser-*.js"],
+    "limit": "120 kB",
+    "gzip": true
+  },
+  {
+    "name": "All CSS",
+    "path": "dist/assets/*.css",
+    "limit": "40 kB",
+    "gzip": true
+  }
+]

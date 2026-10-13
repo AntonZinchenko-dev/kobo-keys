@@ -1,0 +1,139 @@
+{
+  "login": {
+    "title": "Sign in to KŌBŌ",
+    "lead": "No passwords: we'll email you a one-time code.",
+    "demo": "Demo: any email works, the code is 000000.",
+    "email": "Email",
+    "invalidEmail": "Please check the email address",
+    "sendCode": "Get a code",
+    "codeSent": "Code sent to {email}",
+    "code": "Code from the email",
+    "codeHint": "6 digits. In the demo — 000000",
+    "codeFormat": "The code has 6 digits",
+    "wrongCode": "Wrong code",
+    "failed": "Could not sign in, please try again",
+    "signIn": "Sign in",
+    "changeEmail": "Use another email"
+  },
+  "account": {
+    "hello": "Hi, {name}!",
+    "logout": "Sign out",
+    "sections": "Account sections",
+    "tabs": {
+      "orders": "Orders",
+      "subscription": "Subscription",
+      "addresses": "Addresses",
+      "settings": "Settings"
+    }
+  },
+  "orders": {
+    "empty": "No orders yet",
+    "repeat": "Reorder",
+    "repeated": "Items from the order were added to your cart"
+  },
+  "addresses": {
+    "empty": "Addresses will appear here after your first delivery order."
+  },
+  "settings": {
+    "theme": "Theme"
+  },
+  "subscription": {
+    "none": "You're not in the club yet",
+    "noneText": "A new keycap set every month, discounts and early access to drops.",
+    "join": "Join Keycap Club",
+    "status": {
+      "active": "Active",
+      "paused": "Paused",
+      "canceled": "Canceled"
+    },
+    "period": {
+      "month": "Monthly",
+      "year": "Yearly"
+    },
+    "periodLabel": "Billing period",
+    "next": "Next charge: {date}",
+    "pausedUntil": "Paused until {date}",
+    "change": "Change plan",
+    "pauseOrCancel": "Pause or cancel",
+    "resume": "Resume",
+    "history": "Payment history",
+    "paid": "Paid",
+    "pauseTitle": "How about a pause instead?",
+    "cancelTitle": "Cancel subscription?",
+    "pauseText": "You can pause your subscription — no boxes, no charges, and you keep your club discount.",
+    "months": "{count, plural, one {# month} other {# months}}",
+    "stillCancel": "No, cancel completely",
+    "cancelText": "You'll lose the club discount and early access to drops. The current paid period stays yours.",
+    "confirmCancel": "Cancel subscription",
+    "keep": "Keep subscription",
+    "save": "Save",
+    "done": {
+      "change": "Plan changed",
+      "pause": "Subscription paused",
+      "resume": "Subscription is active again",
+      "cancel": "Subscription canceled"
+    }
+  },
+  "club": {
+    "welcome": "Welcome to the club!",
+    "imageAlt": "A subscription box with keycaps",
+    "title": "Keycap Club: a new mood every month",
+    "lead": "A subscription for keycaps and artisans. Cancel or pause any time.",
+    "period": "Billing period",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "popular": "Most popular",
+    "perMonth": "/ month",
+    "perYear": "per year",
+    "billedYearly": "billed once a year:",
+    "billedMonthly": "billed every month",
+    "choose": "Choose {plan}",
+    "compareTitle": "Compare plans",
+    "feature": "Feature",
+    "rows": {
+      "sets": "Keycap sets per month",
+      "artisan": "Artisan in the box",
+      "discount": "Shop discount",
+      "shipping": "Free shipping",
+      "early": "Early access to drops",
+      "surprise": "Surprise keyboard every quarter",
+      "engraving": "Free engraving"
+    },
+    "faqTitle": "FAQ",
+    "faq": {
+      "cancel": {
+        "q": "Can I cancel any time?",
+        "a": "Yes, in two clicks in your account. The period you've paid for stays yours."
+      },
+      "pause": {
+        "q": "I'm going on holiday — what now?",
+        "a": "Pause your subscription for 1–3 months. No boxes, no charges."
+      },
+      "ship": {
+        "q": "When does the box arrive?",
+        "a": "We ship in the first week of the month, delivery takes 1–3 days in Europe."
+      },
+      "gift": {
+        "q": "Can I gift a subscription?",
+        "a": "Yes — use your friend's address and we'll sign the card from you."
+      }
+    },
+    "confirmTitle": "Subscribe",
+    "confirmText": "Plan {plan}. The first charge is today.",
+    "subscribe": "Subscribe",
+    "demo": "Demo: no money is charged"
+  },
+  "game": {
+    "words": "thock clack sakura keycap switch matcha shiba lantern",
+    "title": "Kobo lost this page",
+    "lead": "The link is outdated or the address has a typo. While we look for it — test your typing speed.",
+    "home": "Back to home",
+    "gameTitle": "Typing speed test",
+    "inputLabel": "Type: {text}",
+    "placeholder": "Start typing — the timer starts by itself",
+    "time": "Time",
+    "accuracy": "Accuracy",
+    "result": "Your result: {wpm} words per minute, {accuracy}% accuracy",
+    "again": "Try again"
+  }
+}

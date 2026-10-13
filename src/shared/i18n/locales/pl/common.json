@@ -1,0 +1,180 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "main": "Główna nawigacja",
+    "mobile": "Nawigacja",
+    "catalog": "Sklep",
+    "builder": "Konfigurator",
+    "club": "Keycap Club",
+    "wishlist": "Ulubione",
+    "account": "Konto",
+    "compare": "Porównanie",
+    "search": "Szukaj",
+    "cart": "Koszyk",
+    "profile": "Profil",
+    "skip": "Przejdź do treści"
+  },
+  "search": {
+    "placeholder": "Klawiatury, klawisze, przełączniki…",
+    "open": "Otwórz wyszukiwarkę",
+    "title": "Szukaj w sklepie",
+    "loading": "Szukamy…",
+    "recent": "Ostatnio:",
+    "results": "Wyniki",
+    "popular": "Popularne",
+    "nothing": "Brak wyników dla „{q}”",
+    "hintMove": "wybierz",
+    "hintOpen": "otwórz",
+    "hintClose": "zamknij"
+  },
+  "settings": {
+    "language": "Język",
+    "currency": "Waluta",
+    "theme": "Motyw: {theme}. Przełącz",
+    "themes": {
+      "dark": "ciemny",
+      "light": "jasny",
+      "system": "systemowy"
+    }
+  },
+  "cart": {
+    "open": "Koszyk, produktów: {count}",
+    "title": "Koszyk · {count}",
+    "subtotal": "Suma",
+    "viewCart": "Do koszyka",
+    "checkout": "Do kasy",
+    "empty": "Koszyk jest pusty",
+    "emptyText": "Kobo zajrzał do środka — na razie nic tu nie ma. Idealny moment, żeby coś wybrać.",
+    "toCatalog": "Przejdź do sklepu",
+    "freeShipping": "Postęp do darmowej dostawy",
+    "freeShippingReached": "Dostawa gratis!",
+    "freeShippingLeft": "Do darmowej dostawy brakuje {amount}",
+    "added": "Dodano do koszyka",
+    "notEnough": "Za mało „{name}” w magazynie",
+    "onlyLeft": "{count, plural, =0 {Nie zostało nic} one {Została # sztuka} few {Zostały # sztuki} many {Zostało # sztuk} other {Zostało # sztuki}}",
+    "outOfStock": "Wyprzedane",
+    "decrease": "Zmniejsz ilość",
+    "increase": "Zwiększ ilość",
+    "quantity": "Ilość",
+    "remove": "Usuń „{name}”",
+    "removed": "„{name}” usunięto z koszyka",
+    "undo": "Cofnij",
+    "items": "{count, plural, one {# produkt} few {# produkty} many {# produktów} other {# produktu}}"
+  },
+  "badges": {
+    "new": "Nowość",
+    "drop": "Drop",
+    "bestseller": "Hit",
+    "sale": "Promocja",
+    "limited": "Limitka"
+  },
+  "product": {
+    "soldOut": "Wyprzedane",
+    "ratingLabel": "Ocena {rating} na 5, opinii: {count}",
+    "addToCart": "Do koszyka",
+    "quickView": "Szybki podgląd: {name}",
+    "quickViewShort": "Podgląd",
+    "details": "Szczegóły"
+  },
+  "wishlist": {
+    "add": "Dodaj „{name}” do ulubionych",
+    "remove": "Usuń „{name}” z ulubionych"
+  },
+  "compare": {
+    "add": "Dodaj „{name}” do porównania",
+    "remove": "Usuń „{name}” z porównania",
+    "full": "Można porównać maksymalnie {count} produkty"
+  },
+  "categories": {
+    "keyboards": "Klawiatury",
+    "keycaps": "Klawisze",
+    "switches": "Przełączniki",
+    "accessories": "Akcesoria"
+  },
+  "colors": {
+    "pink": "Różowy",
+    "white": "Biały",
+    "black": "Czarny",
+    "green": "Zielony",
+    "blue": "Niebieski",
+    "red": "Czerwony",
+    "orange": "Pomarańczowy",
+    "yellow": "Żółty",
+    "purple": "Fioletowy",
+    "wood": "Drewno"
+  },
+  "errors": {
+    "generic": "Coś poszło nie tak",
+    "tryAgain": "Spróbuj ponownie za kilka sekund",
+    "rolledBack": "Przywróciliśmy wszystko, jak było",
+    "offline": "Brak połączenia — pokazujemy to, co już się wczytało",
+    "notFound": "Nie znaleziono strony",
+    "crashed": "Kobo zaplątał się w kable",
+    "crashedText": "Wystąpił nieoczekiwany błąd. Odświeżenie strony zwykle pomaga.",
+    "loadFailed": "Nie udało się wczytać danych",
+    "retry": "Spróbuj ponownie"
+  },
+  "actions": {
+    "close": "Zamknij",
+    "reload": "Odśwież",
+    "back": "Wstecz",
+    "showMore": "Pokaż więcej",
+    "share": "Udostępnij",
+    "copied": "Link skopiowany"
+  },
+  "order": {
+    "timeline": "Status zamówienia",
+    "status": {
+      "pending_payment": "Czeka na płatność",
+      "paid": "Opłacone",
+      "processing": "W montażu",
+      "shipped": "Wysłane",
+      "delivered": "Dostarczone",
+      "canceled": "Anulowane"
+    }
+  },
+  "footer": {
+    "about": "Pracownia klawiatur mechanicznych z japońską duszą. Składamy, smarujemy i testujemy ręcznie.",
+    "shop": "Sklep",
+    "more": "Więcej",
+    "demo": "To jest demo",
+    "demoText": "Projekt portfolio: backend działa w przeglądarce (MSW), płatności są symulowane. Nic nie jest pobierane.",
+    "portfolio": "projekt portfolio"
+  },
+  "dev": {
+    "open": "Panel dewelopera",
+    "title": "Panel dewelopera",
+    "lead": "Spowolnij lub zepsuj sieć i zobacz, jak radzi sobie interfejs.",
+    "latency": "Szybkość sieci",
+    "fast": "Szybko",
+    "normal": "Normalnie",
+    "errors": "Losowe błędy serwera",
+    "scenario": "Scenariusz",
+    "scenarios": {
+      "none": "Wszystko OK",
+      "out-of-stock-on-checkout": "Produkt wyprzedał się podczas zamówienia",
+      "payment-server-down": "Serwer płatności nie działa"
+    },
+    "other": "Inne",
+    "offline": "Tryb offline",
+    "pseudo": "Pseudo-język (test układu)",
+    "cheatsheet": "Karty testowe i kody",
+    "cards": {
+      "success": "płatność przejdzie",
+      "declined": "bank odmawia",
+      "threeDs": "wymaga potwierdzenia, kod 1234",
+      "funds": "brak środków"
+    },
+    "promos": "−10% · darmowa dostawa · wygasły",
+    "loginCode": "kod logowania dla dowolnego e-maila",
+    "reset": "Wyczyść dane demo",
+    "resetDone": "Dane wyczyszczone"
+  },
+  "summary": {
+    "subtotal": "Produkty",
+    "discount": "Rabat {code}",
+    "shipping": "Dostawa",
+    "free": "Gratis",
+    "total": "Razem"
+  }
+}

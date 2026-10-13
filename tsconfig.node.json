@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "types": ["node"],
+    "noEmit": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@mocks/*": ["mocks/*"]
+    },
+    "resolveJsonModule": true
+  },
+  "include": [
+    "vite.config.ts",
+    "playwright.config.ts",
+    "scripts",
+    "e2e",
+    "steiger.config.ts",
+    "eslint.config.js"
+  ]
+}

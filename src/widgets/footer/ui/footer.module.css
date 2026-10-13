@@ -1,0 +1,80 @@
+.footer {
+  margin-top: var(--space-8);
+  padding-block: var(--space-7) calc(var(--bottom-nav-h) + var(--space-5));
+  border-top: 1px solid var(--line);
+  background: linear-gradient(to bottom, var(--ink), var(--surface));
+}
+
+@media (width >= 768px) {
+  .footer {
+    padding-bottom: var(--space-5);
+  }
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.brand {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.brand p,
+.note {
+  max-width: 36ch;
+  color: var(--mist);
+  font-size: var(--text-sm);
+}
+
+.settings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.title {
+  margin-bottom: var(--space-3);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mist);
+}
+
+.footer ul {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer ul a:hover {
+  color: var(--sakura);
+}
+
+.bottom {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: var(--space-7);
+  color: var(--mist);
+  font-size: var(--text-xs);
+}
+
+.kanji {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(3rem, 2rem + 6vw, 7rem);
+  line-height: 0.8;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--line);
+}

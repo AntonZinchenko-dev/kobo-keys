@@ -1,0 +1,139 @@
+{
+  "login": {
+    "title": "Logowanie do KŌBŌ",
+    "lead": "Bez haseł: wyślemy jednorazowy kod na e-mail.",
+    "demo": "Demo: pasuje dowolny e-mail, kod to 000000.",
+    "email": "E-mail",
+    "invalidEmail": "Sprawdź adres e-mail",
+    "sendCode": "Wyślij kod",
+    "codeSent": "Kod wysłany na {email}",
+    "code": "Kod z e-maila",
+    "codeHint": "6 cyfr. W demo — 000000",
+    "codeFormat": "Kod ma 6 cyfr",
+    "wrongCode": "Błędny kod",
+    "failed": "Nie udało się zalogować, spróbuj ponownie",
+    "signIn": "Zaloguj się",
+    "changeEmail": "Użyj innego e-maila"
+  },
+  "account": {
+    "hello": "Cześć, {name}!",
+    "logout": "Wyloguj",
+    "sections": "Sekcje konta",
+    "tabs": {
+      "orders": "Zamówienia",
+      "subscription": "Subskrypcja",
+      "addresses": "Adresy",
+      "settings": "Ustawienia"
+    }
+  },
+  "orders": {
+    "empty": "Brak zamówień",
+    "repeat": "Powtórz",
+    "repeated": "Produkty z zamówienia dodano do koszyka"
+  },
+  "addresses": {
+    "empty": "Adresy pojawią się tu po pierwszym zamówieniu z dostawą."
+  },
+  "settings": {
+    "theme": "Motyw"
+  },
+  "subscription": {
+    "none": "Nie jesteś jeszcze w klubie",
+    "noneText": "Nowy zestaw klawiszy co miesiąc, rabaty i wcześniejszy dostęp do dropów.",
+    "join": "Dołącz do Keycap Club",
+    "status": {
+      "active": "Aktywna",
+      "paused": "Wstrzymana",
+      "canceled": "Anulowana"
+    },
+    "period": {
+      "month": "Miesięcznie",
+      "year": "Rocznie"
+    },
+    "periodLabel": "Okres rozliczeniowy",
+    "next": "Następne obciążenie: {date}",
+    "pausedUntil": "Wstrzymana do {date}",
+    "change": "Zmień plan",
+    "pauseOrCancel": "Wstrzymaj lub anuluj",
+    "resume": "Wznów",
+    "history": "Historia płatności",
+    "paid": "Opłacone",
+    "pauseTitle": "A może tylko przerwa?",
+    "cancelTitle": "Anulować subskrypcję?",
+    "pauseText": "Możesz wstrzymać subskrypcję — paczki nie przyjdą, pieniądze nie zostaną pobrane, a rabat klubowy zostaje.",
+    "months": "{count, plural, one {# miesiąc} few {# miesiące} many {# miesięcy} other {# miesiąca}}",
+    "stillCancel": "Nie, anuluj całkowicie",
+    "cancelText": "Stracisz rabat klubowy i wcześniejszy dostęp do dropów. Opłacony okres zostaje.",
+    "confirmCancel": "Anuluj subskrypcję",
+    "keep": "Zostaw subskrypcję",
+    "save": "Zapisz",
+    "done": {
+      "change": "Plan zmieniony",
+      "pause": "Subskrypcja wstrzymana",
+      "resume": "Subskrypcja znów aktywna",
+      "cancel": "Subskrypcja anulowana"
+    }
+  },
+  "club": {
+    "welcome": "Witamy w klubie!",
+    "imageAlt": "Pudełko subskrypcji z klawiszami",
+    "title": "Keycap Club: nowy nastrój co miesiąc",
+    "lead": "Subskrypcja klawiszy i artisanów. Możesz anulować lub wstrzymać w dowolnej chwili.",
+    "period": "Okres rozliczeniowy",
+    "monthly": "Miesięcznie",
+    "yearly": "Rocznie",
+    "popular": "Najczęściej wybierany",
+    "perMonth": "/ miesiąc",
+    "perYear": "rocznie",
+    "billedYearly": "płatne raz w roku:",
+    "billedMonthly": "płatne co miesiąc",
+    "choose": "Wybierz {plan}",
+    "compareTitle": "Porównanie planów",
+    "feature": "Funkcja",
+    "rows": {
+      "sets": "Zestawy klawiszy miesięcznie",
+      "artisan": "Artisan w pudełku",
+      "discount": "Rabat w sklepie",
+      "shipping": "Darmowa dostawa",
+      "early": "Wcześniejszy dostęp do dropów",
+      "surprise": "Klawiatura-niespodzianka co kwartał",
+      "engraving": "Darmowy grawer"
+    },
+    "faqTitle": "Częste pytania",
+    "faq": {
+      "cancel": {
+        "q": "Czy mogę anulować w każdej chwili?",
+        "a": "Tak, w dwa kliknięcia w koncie. Opłacony okres zostaje Twój."
+      },
+      "pause": {
+        "q": "Wyjeżdżam na urlop — co robić?",
+        "a": "Wstrzymaj subskrypcję na 1–3 miesiące. Paczki nie przyjdą, pieniądze nie zostaną pobrane."
+      },
+      "ship": {
+        "q": "Kiedy przychodzi paczka?",
+        "a": "Wysyłamy w pierwszym tygodniu miesiąca, dostawa 1–3 dni po Europie."
+      },
+      "gift": {
+        "q": "Czy mogę podarować subskrypcję?",
+        "a": "Tak — podaj adres znajomego, a kartkę podpiszemy od Ciebie."
+      }
+    },
+    "confirmTitle": "Zamówienie subskrypcji",
+    "confirmText": "Plan {plan}. Pierwsze obciążenie — dziś.",
+    "subscribe": "Subskrybuj",
+    "demo": "Demo: pieniądze nie są pobierane"
+  },
+  "game": {
+    "words": "thock clack sakura keycap switch matcha shiba lantern",
+    "title": "Kobo zgubił tę stronę",
+    "lead": "Link jest nieaktualny albo w adresie jest literówka. Zanim ją znajdziemy — sprawdź szybkość pisania.",
+    "home": "Na stronę główną",
+    "gameTitle": "Test szybkości pisania",
+    "inputLabel": "Wpisz: {text}",
+    "placeholder": "Zacznij pisać — stoper ruszy sam",
+    "time": "Czas",
+    "accuracy": "Dokładność",
+    "result": "Twój wynik: {wpm} słów na minutę, dokładność {accuracy}%",
+    "again": "Jeszcze raz"
+  }
+}

@@ -1,5 +1,8 @@
+/* align-content: start — when a neighbour in the same form row is taller (it has a hint or an error),
+   this field must not stretch: otherwise the extra height is shared between the label and the input. */
 .field {
   display: grid;
+  align-content: start;
   gap: var(--space-1);
 }
 

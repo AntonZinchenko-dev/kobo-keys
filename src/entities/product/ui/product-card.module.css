@@ -13,8 +13,12 @@
     scale 0.3s;
 }
 
+/* z-index lifts the image (and the like / compare buttons inside it) above the title link's
+   full-card ::after overlay — the 3D tilt transform makes .media its own stacking context,
+   so the buttons' own z-index could not escape it and clicks fell through to the product link. */
 .media {
   position: relative;
+  z-index: 1;
   overflow: hidden;
   border-radius: var(--radius-lg);
   background: var(--surface-2);

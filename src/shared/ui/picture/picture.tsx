@@ -20,6 +20,12 @@ const MANIFEST = manifest as Record<string, ManifestEntry>;
 const STOCK_WIDTHS = [320, 480, 640, 960, 1280, 1600];
 const BASE = import.meta.env.BASE_URL;
 
+/**
+ * Slots already shown in this tab. When a card re-mounts (filter change, "show more", going back) its
+ * image is in the HTTP cache, so it is shown at once — no shimmer and no blur-in replay every time.
+ */
+const seen = new Set<string>();
+
 interface Source {
   avif: string;
   webp: string;
@@ -83,7 +89,11 @@ export const Picture = ({
   transitionName,
   style,
 }: PictureProps) => {
-  const [state, setState] = useState<'loading' | 'loaded' | 'error'>('loading');
+  const key = `${slot}@${String(ratio)}`;
+  const [state, setState] = useState<'loading' | 'loaded' | 'error'>(() =>
+    seen.has(key) ? 'loaded' : 'loading',
+  );
+  const [instant] = useState(() => seen.has(key));
   const source = resolve(slot, ratio);
   const mobile = mobileSlot ? resolve(mobileSlot, mobileRatio) : null;
 
@@ -123,14 +133,25 @@ export const Picture = ({
           src={source.fallback}
           alt={alt}
           loading={priority ? 'eager' : 'lazy'}
-          decoding={priority ? 'sync' : 'async'}
+          decoding={priority || instant ? 'sync' : 'async'}
           fetchPriority={priority ? 'high' : 'auto'}
           className={clsx(
             styles.img,
             fit === 'contain' && styles.contain,
             state === 'loaded' && styles.loaded,
+            instant && styles.instant,
           )}
-          onLoad={() => setState('loaded')}
+          ref={(img) => {
+            // Already decoded from cache before React attached onLoad
+            if (img?.complete && img.naturalWidth > 0 && state === 'loading') {
+              seen.add(key);
+              setState('loaded');
+            }
+          }}
+          onLoad={() => {
+            seen.add(key);
+            setState('loaded');
+          }}
           onError={() => setState('error')}
         />
       </picture>

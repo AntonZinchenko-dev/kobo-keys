@@ -41,8 +41,11 @@ export const useCartStore = create<CartState>()(
       lines: [],
       promo: null,
       shipping: 'courier',
-      add: (input, snapshot) => {
-        const key = lineKey(input.productId, input.variantKey);
+      add: ({ productId, variantKey, qty }, snapshot) => {
+        // Only plain fields go into the line: callers may pass extra things (e.g. a DOM node for the
+        // fly-to-cart animation), and the whole cart is persisted to localStorage as JSON.
+        const input = { productId, variantKey, qty };
+        const key = lineKey(productId, variantKey);
         const existing = get().lines.find((l) => l.key === key);
         set({
           lines: existing

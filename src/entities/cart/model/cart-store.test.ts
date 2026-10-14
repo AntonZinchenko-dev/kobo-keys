@@ -25,4 +25,17 @@ describe('cart store', () => {
     remove(key);
     expect(useCartStore.getState().lines).toHaveLength(0);
   });
+
+  it('stores only plain data, so the cart can always be saved to localStorage', () => {
+    // A product card passes its DOM node along for the fly-to-cart animation
+    const input = {
+      productId: 'p-sakura-65',
+      variantKey: 'white/silk-linear',
+      qty: 1,
+      source: document.createElement('article'),
+    };
+    expect(() => useCartStore.getState().add(input, snapshot)).not.toThrow();
+    expect(useCartStore.getState().lines[0]).not.toHaveProperty('source');
+    expect(localStorage.getItem('kobo-cart')).toContain('white/silk-linear');
+  });
 });

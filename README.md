@@ -1,4 +1,4 @@
-# KŌBŌ Keys 工房
+# KŌBŌ Keys
 
 **A mechanical keyboard shop with a Japanese soul — an e-commerce / SaaS portfolio project.**
 Catalog with faceted filters, product page with variants, a live SVG keyboard builder, cart with optimistic
@@ -8,7 +8,8 @@ a subscription (“Keycap Club”), three languages and three currencies.
 There is no server: the whole backend is mocked with **MSW** and runs in the visitor's browser,
 so the project is fully functional on **GitHub Pages**.
 
-**Live demo:** https://antonzinchenko-dev.github.io/kobo-keys/
+**Live demo:** https://antonzinchenko-dev.github.io/kobo-keys/ — the app opens on the sign-in screen;
+press **“Enter the demo account”** (or use any email with the code `000000`).
 
 > Test cards: `4242 4242 4242 4242` succeeds · `…0002` is declined · `4000 0027 6000 3184` asks for 3-D Secure (code `1234`) ·
 > `…9995` insufficient funds. Promo codes: `KOBO10`, `FREESHIP`, `SUMMER24` (expired). Sign-in code: `000000`.
@@ -25,13 +26,14 @@ so the project is fully functional on **GitHub Pages**.
 | **Builder**        | Keyboard rendered in SVG from config (layout, case, keycaps, switches, lighting, spacebar engraving), animated RGB wave via `@property`, undo/redo (Ctrl+Z), share link, PNG export, price breakdown popover with CSS anchor positioning                |
 | **Cart**           | Optimistic updates with rollback on “out of stock”, undo on remove, sync between tabs, server-side totals, promo codes, free-shipping progress                                                                                                          |
 | **Checkout**       | 3 steps, Zod validation, phone mask, address suggestions, Luhn check + card brand detection, Apple/Google Pay imitation, idempotency key, “sold out while you were paying” conflict dialog, 3-D Secure page, confetti 🎉                                |
-| **Account & SaaS** | Passwordless sign-in, orders with a live status timeline, reorder, subscription with plan change, pause (retention flow) and cancel                                                                                                                     |
+| **Account & SaaS** | Sign-in screen as the entry point (auth-gated routes, return to the requested page, 401 → sign-in), passwordless sign-in, orders with a live status timeline, reorder, subscription with plan change, pause (retention flow) and cancel                 |
 | **i18n**           | ru / en / pl in the URL, ICU plurals (“1 товар / 2 товара / 5 товаров”, “2 produkty / 5 produktów”), `Intl` money/dates/relative time, EUR / PLN / USD, lazy-loaded namespaces, typed keys, pseudo-locale for layout testing                            |
 | **Resilience**     | Developer panel: network latency (fast / normal / 3G), random 5xx errors, offline mode, failure scenarios — every loading and error state is visible                                                                                                    |
 
 ## Modern CSS
 
-View Transitions (product image morphs from the card into the gallery, theme switch as a circle growing from the
+A custom accessible dropdown (WAI-ARIA select-only combobox in the top layer via the Popover API, subgrid-aligned
+options, `@starting-style` open/close animation) replaces native selects. View Transitions (product image morphs from the card into the gallery, theme switch as a circle growing from the
 button, language switch) · scroll-driven animations (`animation-timeline: scroll()` / `view()`) for the hero
 parallax, condensing glass header and section reveals · `@property` for an animated conic border, RGB hue wave and
 3D card tilt · container queries · `:has()` · Popover API + `@starting-style` · native `<dialog>` sheets and drawers ·

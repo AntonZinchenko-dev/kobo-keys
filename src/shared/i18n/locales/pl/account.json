@@ -13,7 +13,16 @@
     "wrongCode": "Błędny kod",
     "failed": "Nie udało się zalogować, spróbuj ponownie",
     "signIn": "Zaloguj się",
-    "changeEmail": "Użyj innego e-maila"
+    "changeEmail": "Użyj innego e-maila",
+    "kicker": "Pracownia klawiatur",
+    "artTitle": "Klawiatury składane jak w japońskiej pracowni",
+    "or": "lub",
+    "demoButton": "Wejdź na konto demo",
+    "demoHint": "Bez e-maila i kodu — prosto do sklepu",
+    "welcome": "Witaj ponownie!",
+    "perk1": "Konfigurator z podglądem na żywo",
+    "perk2": "Płatności z 3-D Secure — wszystko na mockach",
+    "perk3": "Trzy języki i trzy waluty"
   },
   "account": {
     "hello": "Cześć, {name}!",

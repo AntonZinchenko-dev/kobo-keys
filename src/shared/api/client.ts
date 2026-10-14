@@ -26,6 +26,12 @@ export const setApiToken = (token: string | null) => {
   context.token = token;
 };
 
+let onUnauthorized: (() => void) | null = null;
+/** The app layer decides what an expired session means (here: drop it and show the sign-in screen). */
+export const setUnauthorizedHandler = (handler: (() => void) | null) => {
+  onUnauthorized = handler;
+};
+
 type QueryValue = string | number | boolean | undefined | null | readonly (string | number)[];
 
 interface RequestOptions {
@@ -75,6 +81,7 @@ export async function api<T>(path: string, options: RequestOptions = {}): Promis
     throw new ApiError(0, { code: 'NETWORK_ERROR' });
   }
 
+  if (response.status === 401 && context.token) onUnauthorized?.();
   if (!response.ok) {
     const errorBody = (await response.json().catch(() => ({ code: 'UNKNOWN' }))) as ApiErrorBody;
     throw new ApiError(response.status, errorBody);

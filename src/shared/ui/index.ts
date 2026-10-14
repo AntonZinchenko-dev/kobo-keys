@@ -9,5 +9,6 @@ export { Accordion, Badge, Kbd, Marquee, Quantity, Rating, Segmented, Skeleton, 
 export { Picture, type PictureProps } from './picture/picture';
 export { Price } from './price/price';
 export { Range } from './range/range';
+export { Select, type SelectOption } from './select/select';
 export { Toaster } from './toast/toast';
 export { toast, useToastStore } from './toast/toast-store';

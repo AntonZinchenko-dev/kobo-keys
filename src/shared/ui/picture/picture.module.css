@@ -28,6 +28,10 @@
   object-fit: contain;
 }
 
+.instant {
+  transition: none;
+}
+
 .loaded {
   opacity: 1;
   filter: none;

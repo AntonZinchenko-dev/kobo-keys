@@ -27,7 +27,8 @@ export const useAddToCart = () => {
     },
     onMutate: (input) => {
       const previous = useCartStore.getState().lines;
-      useCartStore.getState().add(input, input.snapshot);
+      const { productId, variantKey, qty, snapshot } = input;
+      useCartStore.getState().add({ productId, variantKey, qty }, snapshot);
       flyToCart(input.source);
       return { previous };
     },

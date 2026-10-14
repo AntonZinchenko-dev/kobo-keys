@@ -13,7 +13,16 @@
     "wrongCode": "Wrong code",
     "failed": "Could not sign in, please try again",
     "signIn": "Sign in",
-    "changeEmail": "Use another email"
+    "changeEmail": "Use another email",
+    "kicker": "Keyboard workshop",
+    "artTitle": "Keyboards built like in a Japanese workshop",
+    "or": "or",
+    "demoButton": "Enter the demo account",
+    "demoHint": "No email, no code — straight to the shop",
+    "welcome": "Welcome back!",
+    "perk1": "Builder with a live preview",
+    "perk2": "Payments with 3-D Secure — all mocked",
+    "perk3": "Three languages, three currencies"
   },
   "account": {
     "hello": "Hi, {name}!",

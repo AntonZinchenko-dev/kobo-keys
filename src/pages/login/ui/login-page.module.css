@@ -1,37 +1,275 @@
-.page {
+/* Full-screen entry: artwork on the left (top on phones), the sign-in card on the right */
+.screen {
   display: grid;
-  place-items: center;
-  padding-block: var(--space-7);
+  grid-template-rows: auto 1fr;
+  min-height: 100svh;
+  background: var(--ink);
+}
+
+@media (width >= 960px) {
+  .screen {
+    grid-template-columns: minmax(0, 1.15fr) minmax(420px, 1fr);
+    grid-template-rows: none;
+  }
+}
+
+/* ───────── Artwork ───────── */
+.art {
+  position: relative;
+  display: grid;
+  align-items: end;
+  min-height: 230px;
+  overflow: clip;
+  isolation: isolate;
+  background: #050407;
+  color: oklch(96% 0.01 85deg);
+}
+
+@media (width >= 960px) {
+  .art {
+    position: sticky;
+    inset-block-start: 0;
+    height: 100svh;
+  }
+}
+
+.artImage {
+  position: absolute !important;
+  inset: 0;
+  z-index: -2;
+  height: 100%;
+  aspect-ratio: auto !important;
+  background-color: #050407 !important;
+}
+
+.artImage img {
+  object-position: 70% 50%;
+}
+
+.art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to top, rgb(5 4 7 / 92%) 0%, rgb(5 4 7 / 40%) 55%, rgb(5 4 7 / 15%) 100%),
+    radial-gradient(120% 80% at 0% 100%, rgb(242 167 191 / 18%), transparent 60%);
+}
+
+/* Slow "breathing" zoom of the keyboard photo */
+@media (prefers-reduced-motion: no-preference) {
+  .artImage img {
+    animation: breathe 18s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes breathe {
+  to {
+    scale: 1.08;
+    translate: -1.5% 0;
+  }
+}
+
+.kanji {
+  position: absolute;
+  inset-block-start: 8%;
+  inset-inline-end: 4%;
+  z-index: -1;
+  writing-mode: vertical-rl;
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', serif;
+  font-size: clamp(5rem, 3rem + 9vw, 13rem);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(242 167 191 / 32%);
+  user-select: none;
+}
+
+.artText {
+  display: none;
+  gap: var(--space-3);
+  max-width: 520px;
+  padding: var(--space-7) var(--space-7) 104px;
+}
+
+@media (width >= 960px) {
+  .artText {
+    display: grid;
+  }
+}
+
+.kicker {
+  color: #f2a7bf;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.artTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.perks {
+  display: grid;
+  gap: var(--space-2);
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  color: oklch(85% 0.02 290deg);
+  list-style: none;
+}
+
+.perks li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.perks svg {
+  flex: none;
+  padding: 3px;
+  border-radius: 50%;
+  background: rgb(242 167 191 / 18%);
+  color: #f2a7bf;
+  box-sizing: content-box;
+}
+
+/* ───────── Form panel ───────── */
+.panel {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: var(--space-5);
+  padding: var(--space-4) var(--gutter) var(--space-7);
+}
+
+/* Soft sakura glow behind the card */
+.panel::before {
+  content: '';
+  position: absolute;
+  inset: 20% 10% auto;
+  height: 50%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, color-mix(in oklch, var(--sakura), transparent 82%), transparent);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
 .card {
+  position: relative;
   display: grid;
   gap: var(--space-4);
-  width: min(100%, 440px);
-  padding: var(--space-6);
+  place-self: center center;
+  width: min(100%, 420px);
+  padding: var(--space-6) var(--space-5);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: var(--surface);
+  background: color-mix(in oklch, var(--surface), transparent 8%);
+  box-shadow: 0 30px 80px -30px var(--shadow-color);
+  backdrop-filter: blur(16px);
   text-align: center;
+  animation: rise 0.6s var(--ease-out) both;
+}
+
+@media (width >= 960px) {
+  .card {
+    padding: var(--space-7) var(--space-6);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    translate: 0 16px;
+  }
 }
 
 .card form {
   text-align: start;
 }
 
-.mascot {
+/* The brand keycap floating in a soft glow */
+.badge {
+  display: grid;
+  place-items: center;
   justify-self: center;
-  width: 112px;
-  overflow: hidden;
-  border-radius: 50%;
+  width: 84px;
+  height: 84px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 50% 30%, color-mix(in oklch, var(--sakura), transparent 70%), transparent 70%),
+    var(--surface-2);
+  box-shadow:
+    0 0 0 1px var(--line),
+    0 18px 40px -16px color-mix(in oklch, var(--sakura), transparent 40%);
 }
 
-.card h1 {
+.badge > span {
+  scale: 1.5;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .badge > span {
+    animation: float 4s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  50% {
+    translate: 0 -4px;
+  }
+}
+
+.title {
   font-size: var(--text-xl);
+  text-wrap: balance;
 }
 
 .lead,
 .demo {
   color: var(--mist);
+  font-size: var(--text-sm);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--mist);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.demoButton {
+  position: relative;
+}
+
+.error {
+  color: var(--danger);
   font-size: var(--text-sm);
 }

@@ -1,12 +1,19 @@
+/* 0 → 1 while the page scrolls the first 120px. A registered number is animated instead of colours:
+   light-dark() inside @keyframes is resolved against the light scheme in Chrome, so animating
+   `background: var(--glass)` directly gave a light-grey header in the dark theme. */
+@property --glass-progress {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 1;
+}
+
 .header {
   position: sticky;
   inset-block-start: 0;
   z-index: 100;
-  border-bottom: 1px solid transparent;
-  background: transparent;
-  transition:
-    background 0.3s,
-    border-color 0.3s;
+  border-bottom: 1px solid color-mix(in oklch, var(--line) calc(var(--glass-progress) * 100%), transparent);
+  background: color-mix(in oklch, var(--glass) calc(var(--glass-progress) * 100%), transparent);
+  backdrop-filter: blur(calc(var(--glass-progress) * 18px)) saturate(calc(1 + var(--glass-progress) * 0.5));
 }
 
 /* Glass header that condenses as the page scrolls — scroll-driven animation, no scroll listeners */
@@ -24,19 +31,13 @@
   }
 }
 
-@supports not (animation-timeline: scroll()) {
-  .header {
-    background: var(--glass);
-    backdrop-filter: blur(18px) saturate(1.5);
-    border-color: var(--line);
-  }
-}
-
 @keyframes condense {
+  from {
+    --glass-progress: 0;
+  }
+
   to {
-    background: var(--glass);
-    backdrop-filter: blur(18px) saturate(1.5);
-    border-color: var(--line);
+    --glass-progress: 1;
   }
 }
 
@@ -109,14 +110,17 @@
   padding: 0 var(--space-2) 0 var(--space-4);
   border: 1px solid var(--line);
   border-radius: 12px;
-  background: var(--surface);
+  background: color-mix(in oklch, var(--surface) 70%, transparent);
   color: var(--mist);
   font-size: var(--text-sm);
-  transition: border-color 0.2s;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
 }
 
 .search:hover {
   border-color: var(--sakura);
+  background: var(--surface);
 }
 
 .searchText {

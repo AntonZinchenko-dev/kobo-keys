@@ -142,15 +142,7 @@
 }
 
 .select {
-  max-width: 52vw;
-  min-height: 40px;
-  padding: 0 var(--space-3);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--surface);
-  color: var(--text);
-  font-size: var(--text-sm);
-  font-weight: 600;
+  max-width: 60vw;
 }
 
 .active {

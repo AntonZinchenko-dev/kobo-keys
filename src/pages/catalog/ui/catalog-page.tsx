@@ -10,7 +10,7 @@ import { CATEGORIES, type SortId, SORTS } from '@/shared/api';
 import { paths } from '@/shared/config';
 import { useLang } from '@/shared/i18n';
 import { useMediaQuery } from '@/shared/lib';
-import { Button, ButtonLink, Dialog, EmptyState } from '@/shared/ui';
+import { Button, ButtonLink, Dialog, EmptyState, Select } from '@/shared/ui';
 
 import {
   activeCount,
@@ -114,21 +114,19 @@ export const CatalogPage = () => {
             {count > 0 && <span className={styles.filterBadge}>{count}</span>}
           </Button>
         )}
-        <label className={styles.sort}>
-          <span className={styles.sortLabel}>{t('sort.label')}</span>
-          <select
-            aria-label={t('sort.label')}
+        <div className={styles.sort}>
+          <span className={styles.sortLabel} aria-hidden="true">
+            {t('sort.label')}
+          </span>
+          <Select<SortId>
+            label={t('sort.label')}
             value={filters.sort}
-            onChange={(e) => setFilters({ ...filters, sort: e.target.value as SortId })}
+            options={SORTS.map((s) => ({ value: s, label: t(`sort.${s}`) }))}
+            onChange={(sort) => setFilters({ ...filters, sort })}
+            align="end"
             className={styles.select}
-          >
-            {SORTS.map((s) => (
-              <option key={s} value={s}>
-                {t(`sort.${s}`)}
-              </option>
-            ))}
-          </select>
-        </label>
+          />
+        </div>
       </div>
 
       <ActiveFilters filters={filters} onChange={setFilters} />

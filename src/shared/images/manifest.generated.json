@@ -28,5 +28,51 @@
     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAwCdASoQABwAPu1iqU2ppaOiMAgBMB2JYwABSgxn4jYwnAAA/vsgOg9csguSDq5jIhotSR2ZbtdA3O+mxeBRjT7gAA==",
     "color": "rgb(8 8 8)",
     "hash": "70bfe539a12c"
+  },
+  "products/keycaps-onsen/01-main": {
+    "width": 3840,
+    "height": 2560,
+    "widths": [
+      480,
+      768,
+      1080,
+      1440,
+      1920,
+      2560
+    ],
+    "jpg": 1080,
+    "blur": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoQAAsAA4BaJQBOgBrhEwSAAP61qf2OarEPiqdWef6NNDCxc9kk33I6l89O47DaM+WHSwAA",
+    "color": "rgb(200 184 184)",
+    "hash": "5d51f39cae54"
+  },
+  "products/keycaps-onsen/02-detail": {
+    "width": 2048,
+    "height": 1365,
+    "widths": [
+      480,
+      768,
+      1080,
+      1440,
+      1920
+    ],
+    "jpg": 1080,
+    "blur": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoQAAsAA4BaJYwCdACEbZvAAP7gq2aYmVYoxi40y4YOsMpUE0LTrIykKvqq/7VMAP0UAAAA",
+    "color": "rgb(200 184 184)",
+    "hash": "81bc3933aadc"
+  },
+  "products/keycaps-onsen/03-on-board": {
+    "width": 2048,
+    "height": 1365,
+    "widths": [
+      480,
+      768,
+      1080,
+      1440,
+      1920
+    ],
+    "jpg": 1080,
+    "blur": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoQAAsAA4BaJYwCdACEbZvAAP7gq2aYmVYoxi40y4YOsMpUE0LTrIykKvqq/7VMAP0UAAAA",
+    "color": "rgb(200 184 184)",
+    "hash": "81bc3933aadc"
   }
 }

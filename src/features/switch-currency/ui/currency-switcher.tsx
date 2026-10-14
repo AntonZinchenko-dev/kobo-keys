@@ -1,32 +1,35 @@
 import { useTranslation } from 'react-i18next';
 
 import { CURRENCIES, type Currency } from '@/shared/api';
+import { INTL_LOCALE, useLang } from '@/shared/i18n';
 import { useCurrency, useCurrencyStore } from '@/shared/lib';
-import { Icon } from '@/shared/ui';
-
-import styles from './currency-switcher.module.css';
+import { Select } from '@/shared/ui';
 
 const SYMBOL: Record<Currency, string> = { EUR: '€', PLN: 'zł', USD: '$' };
 
-export const CurrencySwitcher = () => {
+export const CurrencySwitcher = ({ className }: { className?: string }) => {
   const { t } = useTranslation();
+  const lang = useLang();
   const currency = useCurrency();
   const setCurrency = useCurrencyStore((s) => s.setCurrency);
+  // "евро", "złoty polski", "US dollar" — names come from the browser, no translations needed
+  const names = new Intl.DisplayNames([INTL_LOCALE[lang]], { type: 'currency' });
+  const options = CURRENCIES.map((c) => ({
+    value: c,
+    label: c,
+    short: `${SYMBOL[c]} ${c}`,
+    lead: SYMBOL[c],
+    hint: names.of(c),
+  }));
+
   return (
-    <label className={styles.wrap}>
-      <Icon name="coins" size={18} />
-      <span className="visually-hidden">{t('settings.currency')}</span>
-      <select
-        className={styles.select}
-        value={currency}
-        onChange={(e) => setCurrency(e.target.value as Currency)}
-      >
-        {CURRENCIES.map((c) => (
-          <option key={c} value={c}>
-            {c} {SYMBOL[c]}
-          </option>
-        ))}
-      </select>
-    </label>
+    <Select
+      label={t('settings.currency')}
+      value={currency}
+      options={options}
+      onChange={setCurrency}
+      align="end"
+      {...(className ? { className } : {})}
+    />
   );
 };
